@@ -40,8 +40,8 @@ export default function Contact() {
             <div className="space-y-4">
               <div>
                 <h3 className="font-medium mb-2">Email</h3>
-                <a href="mailto:contact@example.com" className="text-gray-600 hover:underline">
-                  contact@example.com
+                <a href="mailto:raadfakhrian@gmail.com" className="text-gray-600 hover:underline">
+                  raadfakhrian@gmail.com
                 </a>
               </div>
               
@@ -49,7 +49,7 @@ export default function Contact() {
                 <h3 className="font-medium mb-2">Social Media</h3>
                 <div className="flex gap-4">
                   <a 
-                    href="https://github.com/yourusername" 
+                    href="https://github.com/raadthedeveloper" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-black"
@@ -57,20 +57,12 @@ export default function Contact() {
                     GitHub
                   </a>
                   <a 
-                    href="https://linkedin.com/in/yourusername" 
+                    href="https://linkedin.com/in/raadfakhrian" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-black"
                   >
                     LinkedIn
-                  </a>
-                  <a 
-                    href="https://twitter.com/yourusername" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-black"
-                  >
-                    Twitter
                   </a>
                 </div>
               </div>
