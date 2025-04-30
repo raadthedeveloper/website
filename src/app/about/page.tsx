@@ -1,58 +1,67 @@
+'use client';
+
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900">
       <section className="max-w-6xl mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-12 text-gray-800">About Me</h1>
+        <h1 className="text-4xl font-bold mb-12 text-white">About Me</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Who I Am</h2>
-            <p className="text-gray-700 mb-6">
-              I'm Raad Fakhrian, a passionate developer with a keen interest in building innovative solutions. 
-              My journey in technology has been driven by curiosity and a desire to create meaningful impact 
-              through code.
+            <h2 className="text-2xl font-semibold mb-4 text-white">Background</h2>
+            <p className="text-gray-300 mb-4">
+              I'm a software developer with a passion for creating elegant solutions
+              to complex problems. My journey in technology began with web development,
+              and I've since expanded my expertise to include machine learning and
+              artificial intelligence.
             </p>
-            <p className="text-gray-700">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-              projects, or sharing my knowledge with the developer community.
+            <p className="text-gray-300 mb-4">
+              I believe in writing clean, maintainable code and staying up-to-date
+              with the latest technologies and best practices. I'm always eager to
+              learn new things and take on challenging projects that push my
+              boundaries.
             </p>
           </div>
           
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Skills & Expertise</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-medium mb-2 text-gray-800">Programming Languages</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['JavaScript', 'TypeScript', 'Python', 'Java'].map((skill) => (
-                    <span key={skill} className="bg-white px-3 py-1 rounded-full text-sm text-gray-800 font-medium shadow-sm">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+            <h2 className="text-2xl font-semibold mb-4 text-white">Experience</h2>
+            <div className="space-y-6">
+              <div className="bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-2 text-white">Software Developer</h3>
+                <p className="text-gray-400 mb-2">2020 - Present</p>
+                <p className="text-gray-300">
+                  Working on full-stack web applications, focusing on creating
+                  efficient and scalable solutions. Experienced in React, Node.js,
+                  and various cloud technologies.
+                </p>
               </div>
               
-              <div>
-                <h3 className="font-medium mb-2 text-gray-800">Frameworks & Tools</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['React', 'Next.js', 'Node.js', 'Git', 'Docker'].map((skill) => (
-                    <span key={skill} className="bg-white px-3 py-1 rounded-full text-sm text-gray-800 font-medium shadow-sm">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+              <div className="bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-2 text-white">Machine Learning Engineer</h3>
+                <p className="text-gray-400 mb-2">2018 - 2020</p>
+                <p className="text-gray-300">
+                  Developed and deployed machine learning models for various
+                  applications. Worked with TensorFlow, PyTorch, and other ML
+                  frameworks.
+                </p>
               </div>
-              
-              <div>
-                <h3 className="font-medium mb-2 text-gray-800">Other Skills</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['UI/UX Design', 'Agile Development', 'Technical Writing'].map((skill) => (
-                    <span key={skill} className="bg-white px-3 py-1 rounded-full text-sm text-gray-800 font-medium shadow-sm">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold mb-6 text-white">Education</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2 text-white">Bachelor of Science in Computer Science</h3>
+              <p className="text-gray-400">University Name</p>
+              <p className="text-gray-300">2014 - 2018</p>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2 text-white">Master of Science in Artificial Intelligence</h3>
+              <p className="text-gray-400">University Name</p>
+              <p className="text-gray-300">2018 - 2020</p>
             </div>
           </div>
         </div>

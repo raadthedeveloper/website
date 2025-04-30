@@ -51,16 +51,6 @@ export default function Navigation() {
               Work
             </Link>
             <Link 
-              href="/blog" 
-              className={`text-sm font-medium transition-colors ${
-                isActive('/blog') 
-                  ? 'text-white' 
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Blog
-            </Link>
-            <Link 
               href="/contact" 
               className={`text-sm font-medium transition-colors ${
                 isActive('/contact') 
