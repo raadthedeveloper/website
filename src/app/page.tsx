@@ -13,7 +13,7 @@ export default function Home() {
             Hi, I'm Raad Fakhrian
           </h1>
           <p className="text-xl text-[#cccccc] max-w-2xl">
-            A passionate software developer specializing in web development and machine learning.
+            A passionate associate actuary and software developer specializing in improving processes in any languages, web development and machine learning.
             I love building elegant solutions to complex problems.
           </p>
         </div>
@@ -22,14 +22,12 @@ export default function Home() {
           <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">About Me</h2>
             <p className="text-[#cccccc] mb-4">
-              I'm a software developer with expertise in full-stack web development
-              and machine learning. I enjoy creating efficient, scalable, and
-              user-friendly applications.
+              I'm an actuary with expertise in improving processes in any languages, full-stack web development,
+              and machine learning. I enjoy creating efficient and scalable solutions to problems.
             </p>
             <p className="text-[#cccccc]">
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or sharing my knowledge through
-              technical writing.
+              When I'm not working as an actuary, you can find me exploring new technologies,
+              contributing to open-source projects.
             </p>
           </div>
 
@@ -63,9 +61,10 @@ export default function Home() {
               <div className="bg-[#252526] p-4 rounded-lg border border-[#3e3e42]">
                 <h3 className="font-medium mb-2 text-[#E06C75]">Tools</h3>
                 <ul className="text-[#cccccc] space-y-1">
+                  <li>Moody's AXIS</li>
                   <li>Git</li>
-                  <li>Docker</li>
-                  <li>AWS</li>
+                  <li>SQL</li>
+                  <li>VBA</li>
                 </ul>
               </div>
             </div>
