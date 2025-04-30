@@ -51,12 +51,12 @@ export default function Work() {
   return (
     <div className="min-h-screen">
       <section className="max-w-6xl mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-12">Projects & Experience</h1>
+        <h1 className="text-4xl font-bold mb-12 text-gray-800">Projects & Experience</h1>
         
         <div className="space-y-16">
           {/* Projects Section */}
           <div>
-            <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
+            <h2 className="text-3xl font-bold mb-8 text-gray-800">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-sm overflow-hidden">
@@ -64,13 +64,13 @@ export default function Work() {
                     {/* Add actual project images later */}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
+                    <h3 className="text-xl font-bold mb-2 text-gray-800">{project.title}</h3>
+                    <p className="text-gray-700 mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                          className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-800 font-medium"
                         >
                           {tech}
                         </span>
@@ -78,7 +78,7 @@ export default function Work() {
                     </div>
                     <a 
                       href={project.link}
-                      className="text-black font-medium hover:underline"
+                      className="text-gray-800 font-medium hover:text-gray-600 transition-colors"
                     >
                       View Project →
                     </a>
@@ -90,19 +90,19 @@ export default function Work() {
 
           {/* Experience Section */}
           <div>
-            <h2 className="text-3xl font-bold mb-8">Professional Experience</h2>
+            <h2 className="text-3xl font-bold mb-8 text-gray-800">Professional Experience</h2>
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                      <h3 className="text-xl font-bold">{exp.title}</h3>
-                      <p className="text-gray-600">{exp.company}</p>
+                      <h3 className="text-xl font-bold text-gray-800">{exp.title}</h3>
+                      <p className="text-gray-700">{exp.company}</p>
                     </div>
-                    <span className="text-gray-500">{exp.period}</span>
+                    <span className="text-gray-600">{exp.period}</span>
                   </div>
-                  <p className="text-gray-600 mb-4">{exp.description}</p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                  <p className="text-gray-700 mb-4">{exp.description}</p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
                     {exp.achievements.map((achievement, i) => (
                       <li key={i}>{achievement}</li>
                     ))}
@@ -111,7 +111,7 @@ export default function Work() {
                     {exp.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                        className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-800 font-medium"
                       >
                         {tech}
                       </span>
