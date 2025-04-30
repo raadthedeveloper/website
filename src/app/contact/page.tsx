@@ -81,7 +81,7 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 bg-[#1e1e1e] border border-[#3e3e42] rounded-lg focus:ring-2 focus:ring-[#264f78] focus:border-transparent text-[#cccccc] placeholder-[#858585]"
+                      className="w-full px-4 py-2 bg-[#1e1e1e] border border-[#3e3e42] rounded-lg focus:ring-2 focus:ring-[#264f78] focus:border-transparent text-[#cccccc] placeholder-[#858585] [&:-webkit-autofill]:bg-[#1e1e1e] [&:-webkit-autofill]:text-[#cccccc] [&:-webkit-autofill]:[-webkit-text-fill-color:#cccccc] [&:-webkit-autofill]:[transition:background-color_9999s_ease-in-out_0s]"
                       required
                     />
                   </div>
@@ -94,7 +94,7 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 bg-[#1e1e1e] border border-[#3e3e42] rounded-lg focus:ring-2 focus:ring-[#264f78] focus:border-transparent text-[#cccccc] placeholder-[#858585]"
+                      className="w-full px-4 py-2 bg-[#1e1e1e] border border-[#3e3e42] rounded-lg focus:ring-2 focus:ring-[#264f78] focus:border-transparent text-[#cccccc] placeholder-[#858585] [&:-webkit-autofill]:bg-[#1e1e1e] [&:-webkit-autofill]:text-[#cccccc] [&:-webkit-autofill]:[-webkit-text-fill-color:#cccccc] [&:-webkit-autofill]:[transition:background-color_9999s_ease-in-out_0s]"
                       required
                     />
                   </div>
@@ -107,7 +107,7 @@ export default function Contact() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 bg-[#1e1e1e] border border-[#3e3e42] rounded-lg focus:ring-2 focus:ring-[#264f78] focus:border-transparent text-[#cccccc] placeholder-[#858585]"
+                      className="w-full px-4 py-2 bg-[#1e1e1e] border border-[#3e3e42] rounded-lg focus:ring-2 focus:ring-[#264f78] focus:border-transparent text-[#cccccc] placeholder-[#858585] [&:-webkit-autofill]:bg-[#1e1e1e] [&:-webkit-autofill]:text-[#cccccc] [&:-webkit-autofill]:[-webkit-text-fill-color:#cccccc] [&:-webkit-autofill]:[transition:background-color_9999s_ease-in-out_0s]"
                       required
                     />
                   </div>
