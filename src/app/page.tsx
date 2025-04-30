@@ -33,12 +33,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project cards will go here */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold mb-2">Project 1</h3>
-              <p className="text-gray-600">Description of the first project goes here.</p>
+              <h3 className="text-xl font-bold mb-2">Planner</h3>
+              <p className="text-gray-600">AI driven event planner that helps you plan your next event.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold mb-2">Project 2</h3>
-              <p className="text-gray-600">Description of the second project goes here.</p>
+              <h3 className="text-xl font-bold mb-2">housedrift</h3>
+              <p className="text-gray-600">Cashflow management app for future homebuyers using AI.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-bold mb-2">Project 3</h3>

@@ -33,7 +33,7 @@ export default function Contact() {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
             <p className="text-gray-600 mb-8">
-              I'm always interested in hearing about new projects and opportunities. 
+              Project to project based developer, I'm always interested in hearing about new projects and opportunities or even just to chat. 
               Feel free to reach out through the form or via social media.
             </p>
             
