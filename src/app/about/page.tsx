@@ -1,6 +1,7 @@
 'use client';
 
 import PageLayout from '../../components/PageLayout';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -27,42 +28,73 @@ export default function About() {
           
           <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Experience</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-                <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Software Developer</h3>
-                <p className="text-[#858585] mb-2">2020 - Present</p>
+            <p className="text-[#cccccc] mb-4">
+              Here's a brief overview of my professional journey. For more details, check out my{' '}
+              <Link href="/work" className="text-[#61AFEF] hover:underline">
+                work page
+              </Link>
+              .
+            </p>
+            <div className="space-y-6">
+              <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#E06C75]">Associate Actuary</h3>
+                    <p className="text-[#61AFEF]">PartnerRe</p>
+                  </div>
+                  <span className="text-[#858585]">2024 - Present</span>
+                </div>
                 <p className="text-[#cccccc]">
-                  Working on full-stack web applications, focusing on creating
-                  efficient and scalable solutions. Experienced in React, Node.js,
-                  and various cloud technologies.
+                  Apart of the modelling team, creating solutions for diverse problems.
                 </p>
               </div>
               
-              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-                <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Machine Learning Engineer</h3>
-                <p className="text-[#858585] mb-2">2018 - 2020</p>
+              <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#E06C75]">Actuarial Analyst</h3>
+                    <p className="text-[#61AFEF]">Foresters Financial</p>
+                  </div>
+                  <span className="text-[#858585]">2022 - 2024</span>
+                </div>
                 <p className="text-[#cccccc]">
-                  Developed and deployed machine learning models for various
-                  applications. Worked with TensorFlow, PyTorch, and other ML
-                  frameworks.
+                  Apart of the capital management team, problem solving for capital adequacy and solvency requirements.
                 </p>
               </div>
             </div>
           </div>
         
-          <div>
+          <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-6 text-[#C678DD]">Education</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-                <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Bachelor of Science in Computer Science</h3>
-                <p className="text-[#858585]">University Name</p>
-                <p className="text-[#cccccc]">2014 - 2018</p>
+                <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Honours Bachelor of Science in Pure Mathematics</h3>
+                <p className="text-[#858585]">2022</p>
+                <p className="text-[#cccccc]">University of Toronto</p>
               </div>
-              
+            </div>
+          </div>
+
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold mb-6 text-[#C678DD]">Professional Exams</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-                <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Master of Science in Artificial Intelligence</h3>
-                <p className="text-[#858585]">University Name</p>
-                <p className="text-[#cccccc]">2018 - 2020</p>
+                <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Society of Actuaries</h3>
+                <p className="text-[#858585] mb-4">2022 - 2024</p>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-[#cccccc]">Exam P, Exam FM</span>
+                    <span className="text-[#858585]">2022</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-[#cccccc]">Exam SRM, Exam PA, Exam ATPA, Exam FAM</span>
+                    <span className="text-[#858585]">2023</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-[#cccccc]">Exam ALTAM</span>
+                    <span className="text-[#858585]">2024</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
