@@ -131,11 +131,11 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
           {/* Content area with padding for fixed header */}
           <div className="pt-9">
             {/* Main content with line numbers */}
-            <div className="flex relative">
+            <div className="flex relative min-h-full">
               {/* Line numbers */}
               <div className="sticky left-0 w-12 text-right pr-4 text-[#858585] select-none bg-[#1e1e1e] border-r border-[#3e3e42] text-xs">
-                {Array.from({ length: 50 }, (_, i) => (
-                  <div key={i} className="leading-[21px]">
+                {Array.from({ length: 60 }, (_, i) => (
+                  <div key={i} className="leading-[21px] text-right w-full pr-2 tabular-nums">
                     {i + 1}
                   </div>
                 ))}
@@ -151,7 +151,7 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
       </div>
 
       {/* Terminal */}
-      <div className="fixed bottom-0 left-0 right-0 h-64 bg-[#1e1e1e] border-t border-[#3e3e42]">
+      <div className="fixed bottom-0 left-64 right-0 h-64 bg-[#1e1e1e] border-t border-[#3e3e42]">
         <div className="bg-[#252526] text-[#cccccc] text-xs px-4 py-1 border-b border-[#3e3e42]">
           Terminal
         </div>
