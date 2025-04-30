@@ -41,76 +41,75 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1e1e1e] flex flex-col pt-[41px]">
-      <div className="flex-1 flex">
+    <div className="min-h-screen bg-[#1e1e1e] flex flex-col pt-[72px]">
+      <div className="flex-1 flex pb-64">
         {/* Left Navigation */}
-        <div className="w-64 bg-[#252526] border-r border-[#3e3e42] text-[#cccccc] overflow-y-auto">
-          <div className="sticky top-0">
-            <div className="p-2">
-              <div className="uppercase text-[11px] text-[#858585] font-medium px-2 py-1 border-b border-[#3e3e42]">
-                Website
-              </div>
-              <div className="mt-2 space-y-[2px]">
-                {/* Non-interactive items */}
-                {nonInteractiveItems.map((item, index) => (
-                  <div key={index} className="flex items-center gap-1 px-2 py-[2px] text-[13px] text-[#858585]">
-                    {item.icon}
-                    <span>{item.label}</span>
-                  </div>
-                ))}
+        <div className="fixed left-0 top-[72px] bottom-0 w-64 bg-[#252526] border-r border-[#3e3e42] text-[#cccccc] overflow-y-auto">
+          <div className="p-2">
+            <div className="uppercase text-[11px] text-[#858585] font-medium px-2 py-1 border-b border-[#3e3e42]">
+              Website
+            </div>
+            <div className="mt-2 space-y-[2px]">
+              {/* Non-interactive items */}
+              {nonInteractiveItems.map((item, index) => (
+                <div key={index} className="flex items-center gap-1 px-2 py-[2px] text-[13px] text-[#858585]">
+                  {item.icon}
+                  <span>{item.label}</span>
+                </div>
+              ))}
 
-                {/* src folder structure */}
+              {/* src folder structure */}
+              <div className="flex items-center gap-1 px-2 py-[2px] text-[13px]">
+                <FaChevronDown className="text-[#cccccc]" size={10} />
+                <span className="text-[#E06C75]">src</span>
+              </div>
+              <div className="pl-4">
                 <div className="flex items-center gap-1 px-2 py-[2px] text-[13px]">
                   <FaChevronDown className="text-[#cccccc]" size={10} />
-                  <span className="text-[#E06C75]">src</span>
+                  <span className="text-[#E06C75]">app</span>
                 </div>
                 <div className="pl-4">
-                  <div className="flex items-center gap-1 px-2 py-[2px] text-[13px]">
-                    <FaChevronDown className="text-[#cccccc]" size={10} />
-                    <span className="text-[#E06C75]">app</span>
-                  </div>
-                  <div className="pl-4">
-                    {navItems.map((item, index) => {
-                      const isActive = pathname === item.path;
-                      const folderName = item.parent.split('/').pop();
-                      return (
-                        <div key={index}>
-                          <div className="flex items-center gap-1 px-2 py-[2px] text-[13px]">
-                            <FaChevronDown className="text-[#cccccc]" size={10} />
-                            <span className="text-[#E06C75]">{folderName}</span>
-                          </div>
-                          <div className="pl-4">
-                            <Link 
-                              href={item.path}
-                              className={`flex items-center gap-2 px-2 py-[2px] text-[13px] rounded ${
-                                isActive ? 'bg-[#37373d]' : 'hover:bg-[#2a2d2e]'
-                              }`}
-                            >
-                              <FaReact className="text-[#519ABA]" />
-                              <span className="text-[#cccccc]">{item.label}</span>
-                            </Link>
-                          </div>
+                  {navItems.map((item, index) => {
+                    const isActive = pathname === item.path;
+                    const folderName = item.parent.split('/').pop();
+                    return (
+                      <div key={index}>
+                        <div className="flex items-center gap-1 px-2 py-[2px] text-[13px]">
+                          <FaChevronDown className="text-[#cccccc]" size={10} />
+                          <span className="text-[#E06C75]">{folderName}</span>
                         </div>
-                      );
-                    })}
-                  </div>
+                        <div className="pl-4">
+                          <Link 
+                            href={item.path}
+                            className={`flex items-center gap-2 px-2 py-[2px] text-[13px] rounded ${
+                              isActive ? 'bg-[#37373d]' : 'hover:bg-[#2a2d2e]'
+                            }`}
+                          >
+                            <FaReact className="text-[#519ABA]" />
+                            <span className="text-[#cccccc]">{item.label}</span>
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-
-                {/* Bottom files */}
-                {bottomFiles.map((file, index) => (
-                  <div key={index} className="flex items-center gap-2 px-2 py-[2px] text-[13px] text-[#cccccc]">
-                    {file.icon}
-                    <span>{file.label}</span>
-                  </div>
-                ))}
               </div>
+
+              {/* Bottom files */}
+              {bottomFiles.map((file, index) => (
+                <div key={index} className="flex items-center gap-2 px-2 py-[2px] text-[13px] text-[#cccccc]">
+                  {file.icon}
+                  <span>{file.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="flex-1 overflow-auto">
+        {/* Main content area with fixed left margin for explorer */}
+        <div className="flex-1 ml-64 overflow-auto">
           {/* File path header */}
-          <div className="sticky top-0 bg-[#252526] border-b border-[#3e3e42] px-4 py-2 text-[#cccccc] flex items-center gap-2 text-sm z-10">
+          <div className="fixed top-[72px] left-64 right-0 bg-[#252526] border-b border-[#3e3e42] px-4 py-2 text-[#cccccc] flex items-center gap-2 text-sm z-10">
             {pathSegments.map((segment, index) => {
               const pathUpToHere = pathSegments.slice(0, index + 1).join('/');
               return (
@@ -129,27 +128,30 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
             })}
           </div>
 
-          {/* Main content with line numbers */}
-          <div className="flex relative">
-            {/* Line numbers */}
-            <div className="sticky left-0 w-12 text-right pr-4 text-[#858585] select-none bg-[#1e1e1e] border-r border-[#3e3e42] text-xs">
-              {Array.from({ length: 50 }, (_, i) => (
-                <div key={i} className="leading-[21px]">
-                  {i + 1}
-                </div>
-              ))}
-            </div>
+          {/* Content area with padding for fixed header */}
+          <div className="pt-9">
+            {/* Main content with line numbers */}
+            <div className="flex relative">
+              {/* Line numbers */}
+              <div className="sticky left-0 w-12 text-right pr-4 text-[#858585] select-none bg-[#1e1e1e] border-r border-[#3e3e42] text-xs">
+                {Array.from({ length: 50 }, (_, i) => (
+                  <div key={i} className="leading-[21px]">
+                    {i + 1}
+                  </div>
+                ))}
+              </div>
 
-            {/* Content */}
-            <div className="flex-1 p-4 min-w-0">
-              {children}
+              {/* Content */}
+              <div className="flex-1 p-4 min-w-0">
+                {children}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Terminal */}
-      <div className="h-64 bg-[#1e1e1e] border-t border-[#3e3e42]">
+      <div className="fixed bottom-0 left-0 right-0 h-64 bg-[#1e1e1e] border-t border-[#3e3e42]">
         <div className="bg-[#252526] text-[#cccccc] text-xs px-4 py-1 border-b border-[#3e3e42]">
           Terminal
         </div>

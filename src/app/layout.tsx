@@ -21,8 +21,6 @@ export default function RootLayout({
         <div className="flex flex-col h-screen bg-[#1e1e1e] text-[#cccccc]">
           <Navigation />
           <div className="flex flex-1 overflow-hidden">
-            
-            {/* Main content + Terminal */}
             <div className="flex flex-col flex-1">
               <main className="flex-1 overflow-auto">
                 {children}
