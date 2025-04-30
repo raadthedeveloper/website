@@ -12,23 +12,27 @@ export default function Home() {
           <h1 className="text-5xl font-bold mb-6 text-[#C678DD]">
             Hi, I'm Raad Fakhrian
           </h1>
-          <p className="text-xl text-[#cccccc] max-w-2xl">
-            A passionate associate actuary and software developer specializing in improving processes in any languages, web development and machine learning.
-            I love building elegant solutions to complex problems.
-          </p>
+          <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42] w-[800px]">
+            <p className="text-xl text-[#cccccc]">
+              A passionate associate actuary and software developer specializing in improving processes in any languages, web development and machine learning.
+              I love building elegant solutions to complex problems.
+            </p>
+          </div>
         </div>
 
         <div className="mb-16">
           <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">About Me</h2>
-            <p className="text-[#cccccc] mb-4">
-              I'm an actuary with expertise in improving processes in any languages, full-stack web development,
-              and machine learning. I enjoy creating efficient and scalable solutions to problems.
-            </p>
-            <p className="text-[#cccccc]">
-              When I'm not working as an actuary, you can find me exploring new technologies,
-              contributing to open-source projects.
-            </p>
+            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42] w-[800px]">
+              <p className="text-[#cccccc] mb-4">
+                I'm an actuary with expertise in improving processes in any languages, full-stack web development,
+                and machine learning. I enjoy creating efficient and scalable solutions to problems.
+              </p>
+              <p className="text-[#cccccc]">
+                When I'm not working as an actuary, you can find me exploring new technologies,
+                contributing to open-source projects.
+              </p>
+            </div>
           </div>
 
           <div>

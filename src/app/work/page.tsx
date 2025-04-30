@@ -52,8 +52,6 @@ export default function Work() {
   return (
     <PageLayout filePath="src/app/work/page.tsx">
       <div className="text-[#cccccc]">
-        <h1 className="text-4xl font-bold mb-12 text-[#C678DD]">My Work</h1>
-        
         <div className="space-y-16">
           {/* Projects Section */}
           <div>
