@@ -18,8 +18,8 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <div>
+        <div className="mb-16">
+          <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">About Me</h2>
             <p className="text-[#cccccc] mb-4">
               I'm a software developer with expertise in full-stack web development
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-center">
+        <div>
           <h2 className="text-2xl font-semibold mb-6 text-[#C678DD]">Let's Connect</h2>
           <div className="flex justify-center gap-6">
             <a 

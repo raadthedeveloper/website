@@ -31,7 +31,7 @@ export default function Contact() {
       <div className="text-[#cccccc]">
         <h1 className="text-4xl font-bold mb-12 text-[#C678DD]">Get in Touch</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12">
           <div>
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Contact Information</h2>
             <p className="text-[#cccccc] mb-8">
@@ -39,14 +39,7 @@ export default function Contact() {
               Feel free to reach out through the form or via social media.
             </p>
             
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-medium mb-2 text-[#E06C75]">Email</h3>
-                <a href="mailto:raad.fakhrian@gmail.com" className="text-[#cccccc] hover:text-white transition-colors">
-                  raad.fakhrian@gmail.com
-                </a>
-              </div>
-              
+            <div className="space-y-4 mb-8">
               <div>
                 <h3 className="font-medium mb-2 text-[#E06C75]">Social Media</h3>
                 <div className="flex gap-6">
@@ -70,10 +63,15 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
+
+              <div>
+                <h3 className="font-medium mb-2 text-[#E06C75]">Email</h3>
+                <a href="mailto:raad.fakhrian@gmail.com" className="text-[#cccccc] hover:text-white transition-colors">
+                  raad.fakhrian@gmail.com
+                </a>
+              </div>
             </div>
-          </div>
-          
-          <div>
+
             <form onSubmit={handleSubmit} className="space-y-6 bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-[#E06C75] mb-1">

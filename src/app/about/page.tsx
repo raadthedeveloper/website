@@ -8,8 +8,8 @@ export default function About() {
       <div className="text-[#cccccc]">
         <h1 className="text-4xl font-bold mb-12 text-[#C678DD]">About Me</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
+        <div>
+          <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Background</h2>
             <p className="text-[#cccccc] mb-4">
               I'm a software developer with a passion for creating elegant solutions
@@ -25,9 +25,9 @@ export default function About() {
             </p>
           </div>
           
-          <div>
+          <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Experience</h2>
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
                 <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Software Developer</h3>
                 <p className="text-[#858585] mb-2">2020 - Present</p>
@@ -49,21 +49,21 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
         
-        <div className="mt-12">
-          <h2 className="text-2xl font-semibold mb-6 text-[#C678DD]">Education</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-              <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Bachelor of Science in Computer Science</h3>
-              <p className="text-[#858585]">University Name</p>
-              <p className="text-[#cccccc]">2014 - 2018</p>
-            </div>
-            
-            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-              <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Master of Science in Artificial Intelligence</h3>
-              <p className="text-[#858585]">University Name</p>
-              <p className="text-[#cccccc]">2018 - 2020</p>
+          <div>
+            <h2 className="text-2xl font-semibold mb-6 text-[#C678DD]">Education</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
+                <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Bachelor of Science in Computer Science</h3>
+                <p className="text-[#858585]">University Name</p>
+                <p className="text-[#cccccc]">2014 - 2018</p>
+              </div>
+              
+              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
+                <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Master of Science in Artificial Intelligence</h3>
+                <p className="text-[#858585]">University Name</p>
+                <p className="text-[#cccccc]">2018 - 2020</p>
+              </div>
             </div>
           </div>
         </div>

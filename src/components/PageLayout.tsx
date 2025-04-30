@@ -41,10 +41,10 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1e1e1e] flex flex-col">
+    <div className="min-h-screen bg-[#1e1e1e] flex flex-col pt-[41px]">
       <div className="flex-1 flex">
         {/* Left Navigation */}
-        <div className="w-64 bg-[#252526] border-r border-[#3e3e42] text-[#cccccc]">
+        <div className="w-64 bg-[#252526] border-r border-[#3e3e42] text-[#cccccc] ml-12">
           <div className="p-2">
             <div className="uppercase text-[11px] text-[#858585] font-medium px-2 py-1">
               Explorer
