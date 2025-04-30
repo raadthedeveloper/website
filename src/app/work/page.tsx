@@ -49,7 +49,7 @@ export default function Work() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       <section className="max-w-6xl mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-12 text-gray-800">Projects & Experience</h1>
         
@@ -70,7 +70,7 @@ export default function Work() {
                       {project.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-800 font-medium"
+                          className="bg-white px-3 py-1 rounded-full text-sm text-gray-800 font-medium shadow-sm border border-gray-100"
                         >
                           {tech}
                         </span>
@@ -111,7 +111,7 @@ export default function Work() {
                     {exp.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-800 font-medium"
+                        className="bg-white px-3 py-1 rounded-full text-sm text-gray-800 font-medium shadow-sm border border-gray-100"
                       >
                         {tech}
                       </span>
