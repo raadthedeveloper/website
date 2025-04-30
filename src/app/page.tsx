@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <PageLayout filePath="src/app/page.tsx">
       <div className="text-[#cccccc]">
-        <div className="text-center mb-16">
+        <div className="mb-16">
           <h1 className="text-5xl font-bold mb-6 text-[#C678DD]">
             Hi, I'm Raad Fakhrian
           </h1>
-          <p className="text-xl text-[#cccccc] max-w-2xl mx-auto">
+          <p className="text-xl text-[#cccccc] max-w-2xl">
             A passionate software developer specializing in web development and machine learning.
             I love building elegant solutions to complex problems.
           </p>
