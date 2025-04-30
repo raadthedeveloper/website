@@ -13,11 +13,11 @@ export default function Navigation() {
     <div className="w-full">
       {/* Top Bar */}
       <div className="h-8 bg-[#1e1e1e] flex items-center px-4">
-        <span className="text-[#cccccc] text-sm">Raad Fakhrian</span>
+        <span className="text-[#cccccc] text-base font-medium">Raad Fakhrian</span>
       </div>
 
       {/* Tab Bar */}
-      <div className="h-9 bg-[#252526] flex items-center border-b border-[#3e3e42]">
+      <div className="h-10 bg-[#252526] flex items-center border-b border-[#3e3e42]">
         {/* Side Icons with Dropdown */}
         <div className="flex h-full border-r border-[#3e3e42] items-center pr-1">
           <div className="flex items-center">
@@ -40,7 +40,7 @@ export default function Navigation() {
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-1">
+        <div className="flex">
           {[
             { path: '/', label: 'page.tsx' },
             { path: '/about', label: 'page.tsx' },
@@ -50,13 +50,13 @@ export default function Navigation() {
             <Link
               key={index}
               href={item.path}
-              className={`flex items-center h-9 px-4 border-t border-l border-r border-transparent min-w-[120px] ${
+              className={`flex items-center h-10 px-4 border-t border-l border-r border-transparent group ${
                 isActive(item.path)
                   ? 'bg-[#1e1e1e] text-white border-[#3e3e42]'
                   : 'text-[#969696] hover:text-white'
               }`}
             >
-              <span className="text-xs flex-1">
+              <span className="text-sm">
                 {item.path === '/' ? 'home/' : item.path.slice(1) + '/'}{item.label}
               </span>
               {isActive(item.path) && (
@@ -66,11 +66,6 @@ export default function Navigation() {
               )}
             </Link>
           ))}
-        </div>
-
-        {/* Terminal Panel */}
-        <div className="h-full border-l border-[#3e3e42] flex items-center px-4">
-          <span className="text-[#969696] text-xs">TERMINAL</span>
         </div>
       </div>
     </div>
