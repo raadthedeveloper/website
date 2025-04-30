@@ -5,22 +5,22 @@ import PageLayout from '../../components/PageLayout';
 export default function Work() {
   const projects = [
     {
-      title: 'E-commerce Platform',
-      description: 'A full-stack e-commerce platform built with Next.js, Node.js, and PostgreSQL. Features include user authentication, product management, shopping cart, and payment processing.',
-      technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
-      link: '#'
+      title: 'housedrift',
+      description: ["A web application for managing and tracking house sales, using AI to predict house prices and cashflows for future homeowners. Not open for public yet, private repository."],
+      technologies: ['Next.js', 'Node.js', 'PostgreSQL', "React"],
+      link: 'https://github.com/raadthedeveloper'
     },
     {
-      title: 'Machine Learning Dashboard',
-      description: 'A dashboard for visualizing and analyzing machine learning model performance. Built with React, Python, and TensorFlow.',
-      technologies: ['React', 'Python', 'TensorFlow', 'D3.js'],
-      link: '#'
+      title: 'planner',
+      description: 'AI event planner to take care of your event planning needs. Not open for public yet, private repository.',
+      technologies: ['React', 'Next.js', 'Node.js', 'Stripe','React'],
+      link: 'https://github.com/raadthedeveloper'
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates. Features include task assignment, progress tracking, and team collaboration.',
-      technologies: ['React', 'Firebase', 'Material-UI'],
-      link: '#'
+      title: 'Addy Canada',
+      description: 'A web application for finding events in the area. Dissolved in 2019.',
+      technologies: ['React', 'Next.js', 'Node.js', 'Stripe','React'],
+      link: 'https://github.com/raadthedeveloper'
     }
   ];
 

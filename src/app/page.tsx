@@ -73,7 +73,6 @@ export default function Home() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold mb-6 text-[#C678DD]">Let's Connect</h2>
           <div className="flex justify-center gap-6">
             <a 
               href="https://github.com/raadthedeveloper"
