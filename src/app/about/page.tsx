@@ -6,7 +6,8 @@ import Link from 'next/link';
 export default function About() {
   return (
     <PageLayout filePath="src/app/about/page.tsx">
-      <div className="text-[#cccccc]">
+      <div className="text-[#cccccc] flex gap-8">
+        <div className="flex-1">
           <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Experience</h2>
             <div className="space-y-8">
@@ -121,6 +122,15 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        <div className="w-[800px] h-[950px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+          <img 
+            src="/uhhpicofme6.jpg" 
+            alt="Raad Fakhrian" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
     </PageLayout>
   );
 } 
