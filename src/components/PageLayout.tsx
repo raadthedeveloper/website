@@ -152,17 +152,21 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
           Terminal
         </div>
         <div className="p-4 text-xs font-mono">
-          <div className="text-[#cccccc]">zsh: command not found: run</div>
-          <div className="text-[#cccccc]">(base) raad@raads-MBP website % npm run main</div>
-          <div className="text-[#F44747]">npm ERR! Missing script: "main"</div>
-          <div className="text-[#F44747]">npm ERR! To see a list of scripts, run:</div>
-          <div className="text-[#F44747]">npm ERR!   npm run</div>
-          <div className="text-[#F44747]">npm ERR! A complete log of this run can be found in: /Users/raad/.npm/_logs/2025-04-29T23_34_12_018Z-debug-0.log</div>
-          <div className="text-[#cccccc]">(base) raad@raads-MBP website % npm &lt;command&gt;</div>
-          <div className="text-[#cccccc]">Usage:</div>
-          <div className="text-[#cccccc]">npm install        install all the dependencies in your project</div>
-          <div className="text-[#cccccc]">npm install &lt;foo&gt;  add the &lt;foo&gt; dependency to your project</div>
-          <div className="text-[#cccccc]">npm test          run this project's tests</div>
+          <div className="text-[#cccccc]">Specify configs in the ini-formatted file:</div>
+          <div className="text-[#cccccc]">/Users/raad/.npmrc</div>
+          <div className="text-[#cccccc]">or on the command line via: npm &lt;command&gt; --key=value</div>
+          <div className="text-[#cccccc]"></div>
+          <div className="text-[#cccccc]">More configuration info: npm help config</div>
+          <div className="text-[#cccccc]">Configuration fields: npm help 7 config</div>
+          <div className="text-[#cccccc]"></div>
+          <div className="text-[#cccccc]">npm@10.2.3 /usr/local/lib/node_modules/npm</div>
+          <div className="text-[#cccccc]">(base) raad@raads-MBP website % npm run dev</div>
+          <div className="text-[#cccccc]"></div>
+          <div className="text-[#cccccc]">&gt; website@0.1.0 dev</div>
+          <div className="text-[#cccccc]">&gt; next dev --turbopack</div>
+          <div className="text-[#cccccc]"></div>
+          <div className="text-[#C678DD]">▲ Next.js 15.3.1 (Turbopack)</div>
+          <div className="text-[#cccccc]">- Local:        http://localhost:3000</div>
         </div>
       </div>
     </div>

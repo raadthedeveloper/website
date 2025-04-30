@@ -29,11 +29,11 @@ export default function Contact() {
   return (
     <PageLayout filePath="src/app/contact/page.tsx">
       <div className="text-[#cccccc]">
-        <h1 className="text-4xl font-bold mb-12 text-[#4ec9b0]">Get in Touch</h1>
+        <h1 className="text-4xl font-bold mb-12 text-[#C678DD]">Get in Touch</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-[#4ec9b0]">Contact Information</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Contact Information</h2>
             <p className="text-[#cccccc] mb-8">
               I'm always interested in hearing about new projects and opportunities. 
               Feel free to reach out through the form or via social media.
@@ -41,14 +41,14 @@ export default function Contact() {
             
             <div className="space-y-4">
               <div>
-                <h3 className="font-medium mb-2 text-[#9cdcfe]">Email</h3>
+                <h3 className="font-medium mb-2 text-[#E06C75]">Email</h3>
                 <a href="mailto:raad.fakhrian@gmail.com" className="text-[#cccccc] hover:text-white transition-colors">
                   raad.fakhrian@gmail.com
                 </a>
               </div>
               
               <div>
-                <h3 className="font-medium mb-2 text-[#9cdcfe]">Social Media</h3>
+                <h3 className="font-medium mb-2 text-[#E06C75]">Social Media</h3>
                 <div className="flex gap-6">
                   <a 
                     href="https://github.com/raadthedeveloper"
@@ -76,7 +76,7 @@ export default function Contact() {
           <div>
             <form onSubmit={handleSubmit} className="space-y-6 bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[#9cdcfe] mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-[#E06C75] mb-1">
                   Name
                 </label>
                 <input
@@ -91,7 +91,7 @@ export default function Contact() {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[#9cdcfe] mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-[#E06C75] mb-1">
                   Email
                 </label>
                 <input
@@ -106,7 +106,7 @@ export default function Contact() {
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-[#9cdcfe] mb-1">
+                <label htmlFor="subject" className="block text-sm font-medium text-[#E06C75] mb-1">
                   Subject
                 </label>
                 <input
@@ -121,7 +121,7 @@ export default function Contact() {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[#9cdcfe] mb-1">
+                <label htmlFor="message" className="block text-sm font-medium text-[#E06C75] mb-1">
                   Message
                 </label>
                 <textarea

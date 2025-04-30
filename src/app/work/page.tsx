@@ -52,23 +52,23 @@ export default function Work() {
   return (
     <PageLayout filePath="src/app/work/page.tsx">
       <div className="text-[#cccccc]">
-        <h1 className="text-4xl font-bold mb-12 text-[#4ec9b0]">My Work</h1>
+        <h1 className="text-4xl font-bold mb-12 text-[#C678DD]">My Work</h1>
         
         <div className="space-y-16">
           {/* Projects Section */}
           <div>
-            <h2 className="text-3xl font-bold mb-8 text-[#4ec9b0]">Featured Projects</h2>
+            <h2 className="text-3xl font-bold mb-8 text-[#C678DD]">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <div key={index} className="bg-[#252526] rounded-lg overflow-hidden shadow-lg border border-[#3e3e42]">
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 text-[#9cdcfe]">{project.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">{project.title}</h3>
                     <p className="text-[#cccccc] mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="bg-[#2d2d2d] text-[#ce9178] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
+                          className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
                         >
                           {tech}
                         </span>
@@ -76,7 +76,7 @@ export default function Work() {
                     </div>
                     <a 
                       href={project.link}
-                      className="inline-block bg-[#264f78] text-[#cccccc] px-4 py-2 rounded-lg hover:bg-[#365373] transition-colors"
+                      className="inline-block bg-[#454545] text-[#cccccc] px-4 py-2 rounded-lg hover:bg-[#505050] transition-colors"
                     >
                       View Project
                     </a>
@@ -88,14 +88,14 @@ export default function Work() {
 
           {/* Experience Section */}
           <div>
-            <h2 className="text-3xl font-bold mb-8 text-[#4ec9b0]">Professional Experience</h2>
+            <h2 className="text-3xl font-bold mb-8 text-[#C678DD]">Professional Experience</h2>
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-[#9cdcfe]">{exp.title}</h3>
-                      <p className="text-[#ce9178]">{exp.company}</p>
+                      <h3 className="text-xl font-bold text-[#E06C75]">{exp.title}</h3>
+                      <p className="text-[#61AFEF]">{exp.company}</p>
                     </div>
                     <span className="text-[#858585]">{exp.period}</span>
                   </div>
@@ -109,7 +109,7 @@ export default function Work() {
                     {exp.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="bg-[#2d2d2d] text-[#ce9178] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
+                        className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
                       >
                         {tech}
                       </span>
