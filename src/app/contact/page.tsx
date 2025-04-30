@@ -28,8 +28,8 @@ export default function Contact() {
 
   return (
     <PageLayout filePath="src/app/contact/page.tsx">
-      <div className="text-[#cccccc]">
-        <div className="w-[600px]">
+      <div className="text-[#cccccc] flex gap-8">
+        <div className="flex-1">
           <div className="bg-[#252526] p-8 rounded-lg border border-[#3e3e42]">
             <div className="grid grid-cols-1 gap-12">
               <div>
@@ -135,6 +135,14 @@ export default function Contact() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="w-[800px] h-[885px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+          <img 
+            src="/uhhpicofme5.jpg" 
+            alt="Raad Fakhrian" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </PageLayout>
