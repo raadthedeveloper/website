@@ -7,35 +7,9 @@ export default function About() {
   return (
     <PageLayout filePath="src/app/about/page.tsx">
       <div className="text-[#cccccc]">
-        <h1 className="text-4xl font-bold mb-12 text-[#C678DD]">About Me</h1>
-        
-        <div>
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Background</h2>
-            <p className="text-[#cccccc] mb-4">
-              I'm a software developer with a passion for creating elegant solutions
-              to complex problems. My journey in technology began with web development,
-              and I've since expanded my expertise to include machine learning and
-              artificial intelligence.
-            </p>
-            <p className="text-[#cccccc] mb-4">
-              I believe in writing clean, maintainable code and staying up-to-date
-              with the latest technologies and best practices. I'm always eager to
-              learn new things and take on challenging projects that push my
-              boundaries.
-            </p>
-          </div>
-          
           <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Experience</h2>
-            <p className="text-[#cccccc] mb-4">
-              Here's a brief overview of my professional journey. For more details, check out my{' '}
-              <Link href="/work" className="text-[#61AFEF] hover:underline">
-                work page
-              </Link>
-              .
-            </p>
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
                 <div className="flex justify-between items-start mb-4">
                   <div>
@@ -44,9 +18,21 @@ export default function About() {
                   </div>
                   <span className="text-[#858585]">2024 - Present</span>
                 </div>
-                <p className="text-[#cccccc]">
-                  Apart of the modelling team, creating solutions for diverse problems.
-                </p>
+                <p className="text-[#cccccc] mb-4">Apart of the modelling team, creating solutions for diverse problems.</p>
+                <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
+                  <li>Modelled new treaty cells in AXIS from pricing to production by creating AXIS scripts in DataLink, batches, and rules tables</li>
+                  <li>Took initiative by engineering .dll files using C++ in Visual Studio to explore options in making AXIS processes/batches more efficient</li>
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {["C++", "Moody's AXIS", "SQL", "Office 365"].map((tech, techIndex) => (
+                    <span 
+                      key={techIndex}
+                      className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
               
               <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
@@ -57,9 +43,21 @@ export default function About() {
                   </div>
                   <span className="text-[#858585]">2022 - 2024</span>
                 </div>
-                <p className="text-[#cccccc]">
-                  Apart of the capital management team, problem solving for capital adequacy and solvency requirements.
-                </p>
+                <p className="text-[#cccccc] mb-4">Apart of the capital management team, problem solving for capital adequacy and solvency requirements.</p>
+                <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
+                  <li>Enhanced team efficiency by developing a SQL stored procedure, automating the removal of unused segmentation rows and line items from data tables, streamlining our roll-up procedure and expediting results delivery</li>
+                  <li>Created robust automation solutions using VBA, enabling the seamless execution of various tasks independently and achieving remarkable efficiency gains with manual process times reduced by up to 90%</li>
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {["SQL", "VBA", "Moody's AXIS"].map((tech, techIndex) => (
+                    <span 
+                      key={techIndex}
+                      className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -99,7 +97,6 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
     </PageLayout>
   );
 } 
