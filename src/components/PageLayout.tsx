@@ -152,12 +152,30 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
 
       {/* Terminal */}
       <div className="fixed bottom-0 left-64 right-0 h-64 bg-[#1e1e1e] border-t border-[#3e3e42]">
-        <div className="bg-[#252526] text-[#cccccc] text-xs px-4 py-1 border-b border-[#3e3e42]">
-          Terminal
+        {/* Terminal Top Bar */}
+        <div className="flex items-center border-b border-[#3e3e42] bg-[#252526] text-[#cccccc] text-xs">
+          <div className="flex items-center">
+            <div className="px-4 py-1 bg-[#37373d] text-[#cccccc]">Problems</div>
+            <div className="px-4 py-1 text-[#cccccc]">Output</div>
+            <div className="px-4 py-1 text-[#cccccc]">Debug Console</div>
+            <div className="px-4 py-1 bg-[#1e1e1e] text-[#cccccc]">Terminal</div>
+            <div className="px-4 py-1 text-[#cccccc]">Ports</div>
+          </div>
+          <div className="ml-auto flex items-center pr-4">
+            <span className="px-2 py-1 bg-[#37373d] text-[#cccccc] rounded mr-2">node</span>
+            <span className="text-[#cccccc]">+</span>
+            <span className="mx-2 text-[#cccccc]">⊟</span>
+            <span className="text-[#cccccc]">🗑</span>
+            <span className="ml-2 text-[#cccccc]">⋯</span>
+            <span className="ml-2 text-[#cccccc]">^</span>
+            <span className="ml-2 text-[#cccccc]">×</span>
+          </div>
         </div>
+
+        {/* Terminal Content */}
         <div className="p-4 text-xs font-mono">
           <div className="text-[#cccccc]">Specify configs in the ini-formatted file:</div>
-          <div className="text-[#cccccc]">/Users/raad/.npmrc</div>
+          <div className="pl-8 text-[#cccccc]">/Users/raad/.npmrc</div>
           <div className="text-[#cccccc]">or on the command line via: npm &lt;command&gt; --key=value</div>
           <div className="text-[#cccccc]"></div>
           <div className="text-[#cccccc]">More configuration info: npm help config</div>
@@ -166,11 +184,11 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
           <div className="text-[#cccccc]">npm@10.2.3 /usr/local/lib/node_modules/npm</div>
           <div className="text-[#cccccc]">(base) raad@raads-MBP website % npm run dev</div>
           <div className="text-[#cccccc]"></div>
-          <div className="text-[#cccccc]">&gt; website@0.1.0 dev</div>
-          <div className="text-[#cccccc]">&gt; next dev --turbopack</div>
+          <div className="pl-2 text-[#cccccc]">&gt; website@0.1.0 dev</div>
+          <div className="pl-2 text-[#cccccc]">&gt; next dev --turbopack</div>
           <div className="text-[#cccccc]"></div>
           <div className="text-[#C678DD]">▲ Next.js 15.3.1 (Turbopack)</div>
-          <div className="text-[#cccccc]">- Local:        http://localhost:3000</div>
+          <div className="pl-4 text-[#cccccc]">- Local:        http://localhost:3000</div>
         </div>
       </div>
     </div>
