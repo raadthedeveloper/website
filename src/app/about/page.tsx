@@ -38,6 +38,30 @@ export default function About() {
               <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
                 <div className="flex justify-between items-start mb-4">
                   <div>
+                    <h3 className="text-xl font-bold text-[#E06C75]">Software Engineer</h3>
+                    <p className="text-[#61AFEF]">Synaply</p>
+                  </div>
+                  <span className="text-[#858585]">2024 - 2024</span>
+                </div>
+                <p className="text-[#cccccc] mb-4">Engineer apart of a sales solution web application.</p>
+                <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
+                  <li><a href="https://www.synaply.io" target="_blank" rel="noopener noreferrer" className="text-[#61AFEF] hover:text-white transition-colors">www.synaply.io</a></li>
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {["React", "Next.Js", "Express"].map((tech, techIndex) => (
+                    <span 
+                      key={techIndex}
+                      className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
                     <h3 className="text-xl font-bold text-[#E06C75]">Actuarial Analyst</h3>
                     <p className="text-[#61AFEF]">Foresters Financial</p>
                   </div>
