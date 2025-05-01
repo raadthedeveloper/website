@@ -6,8 +6,15 @@ import Navigation from "@/components/Navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Raad Fakhrian - Portfolio",
-  description: "Personal portfolio website of Raad Fakhrian",
+  title: "Raad Fakhrian",
+  description: "raad's website",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#1e1e1e',
 };
 
 export default function RootLayout({
@@ -17,6 +24,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </head>
       <body className={inter.className}>
         <div className="flex flex-col h-screen bg-[#1e1e1e] text-[#cccccc]">
           <Navigation />
