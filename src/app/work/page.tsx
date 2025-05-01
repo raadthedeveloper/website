@@ -44,7 +44,7 @@ export default function Work() {
       achievements: [
         "www.synaply.io"
       ],
-      technologies: ["React", "Next.Js", "Express"]
+      technologies: ["React", "Next.JS", "Express"]
     },
     {
       title: "Actuarial Analyst",

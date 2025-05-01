@@ -35,6 +35,30 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Hobbies</h2>
+            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <h3 className="font-medium mb-2 text-[#E06C75]">Sports</h3>
+                  <ul className="text-[#cccccc] space-y-1">
+                    <li>Skiing</li>
+                    <li>Golfing</li>
+                    <li>Running</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-medium mb-2 text-[#E06C75]">Other Interests</h3>
+                  <ul className="text-[#cccccc] space-y-1">
+                    <li>Chess</li>
+                    <li>LeetCode</li>
+                    <li>Painting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div>
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Skills</h2>
             <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
@@ -97,7 +121,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[800px] h-[756px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="w-[800px] h-[997px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme3.jpg" 
             alt="Raad Fakhrian" 

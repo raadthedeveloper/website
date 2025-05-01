@@ -49,7 +49,7 @@ export default function About() {
                   <li><a href="https://www.synaply.io" target="_blank" rel="noopener noreferrer" className="text-[#61AFEF] hover:text-white transition-colors">www.synaply.io</a></li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
-                  {["React", "Next.Js", "Express"].map((tech, techIndex) => (
+                  {["React", "Next.JS", "Express"].map((tech, techIndex) => (
                     <span 
                       key={techIndex}
                       className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
