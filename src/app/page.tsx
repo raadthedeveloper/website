@@ -11,26 +11,12 @@ export default function Home() {
         <div className="flex-1">
           <div className="mb-8">
             <h1 className="text-5xl font-bold mb-6 text-[#C678DD]">
-              hello world, it's raad fakhrian
+              hello world, i'm raad
             </h1>
             <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-              <p className="text-xl text-[#cccccc]">
-                A passionate associate actuary and software developer specializing in improving processes in any languages, web development and machine learning.
-                I love building elegant solutions to complex problems.
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">About Me</h2>
-            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-              <p className="text-[#cccccc] mb-4">
-                I'm an actuary with expertise in improving processes in any languages, full-stack web development,
-                and machine learning. I enjoy creating efficient and scalable solutions to problems.
-              </p>
               <p className="text-[#cccccc]">
-                When I'm not working as an actuary, you can find me exploring new technologies,
-                contributing to open-source projects.
+                I'm a passionate associate actuary and software developer specializing in improving processes in any language. I work on full-stack web development and machine learning projects.
+                I love to build solutions to complex problems.
               </p>
             </div>
           </div>
@@ -121,7 +107,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[800px] h-[997px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="w-[800px] h-[745px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme3.jpg" 
             alt="Raad Fakhrian" 
