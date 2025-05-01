@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaChevronRight, FaChevronDown, FaReact } from 'react-icons/fa';
@@ -14,6 +14,24 @@ interface PageLayoutProps {
 export default function PageLayout({ children, filePath }: PageLayoutProps) {
   const pathname = usePathname();
   const pathSegments = filePath.split('/');
+  const [lineCount, setLineCount] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const calculateLines = () => {
+      if (contentRef.current) {
+        const contentHeight = contentRef.current.scrollHeight;
+        const lineHeight = 21; // matches the leading-[21px] we use for line numbers
+        const calculatedLines = Math.ceil(contentHeight / lineHeight);
+        setLineCount(Math.max(calculatedLines, 1)); // ensure at least 1 line
+      }
+    };
+
+    calculateLines();
+    window.addEventListener('resize', calculateLines);
+    
+    return () => window.removeEventListener('resize', calculateLines);
+  }, [children]);
 
   const navItems = [
     { path: '/', label: 'page.tsx', parent: 'src/app' },
@@ -134,7 +152,7 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
             <div className="flex relative min-h-full">
               {/* Line numbers */}
               <div className="sticky left-0 w-12 text-right pr-4 text-[#858585] select-none bg-[#1e1e1e] border-r border-[#3e3e42] text-xs">
-                {Array.from({ length: 60 }, (_, i) => (
+                {Array.from({ length: lineCount }, (_, i) => (
                   <div key={i} className="leading-[21px] text-right w-full pr-2 tabular-nums">
                     {i + 1}
                   </div>
@@ -142,7 +160,7 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
               </div>
 
               {/* Content */}
-              <div className="flex-1 p-4 min-w-0">
+              <div ref={contentRef} className="flex-1 p-4 min-w-0">
                 {children}
               </div>
             </div>
