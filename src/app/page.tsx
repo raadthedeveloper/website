@@ -15,32 +15,39 @@ export default function Home() {
             </h1>
             <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
               <p className="text-[#cccccc]">
-                I'm a passionate associate actuary and software developer specializing in improving processes in any language. I work on full-stack web development and machine learning projects.
-                I love to build solutions to complex problems.
+              I'm an actuarial professional with a strong foundation in insurance analytics, 
+              complemented by my work as an independent software engineer focused on high-performance, 
+              cross-functional systems. My expertise spans full-stack application architecture, 
+              machine learning model deployment, and the automation of actuarial and financial workflows 
+              across diverse programming environments. I am driven by the challenge of deconstructing complex 
+              problems and engineering elegant, data-informed solutions that integrate seamlessly across 
+              business and technology domains.
               </p>
             </div>
           </div>
 
           <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Hobbies</h2>
-            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-medium mb-2 text-[#E06C75]">Sports</h3>
-                  <ul className="text-[#cccccc] space-y-1">
-                    <li>Skiing</li>
-                    <li>Golfing</li>
-                    <li>Running</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-medium mb-2 text-[#E06C75]">Other Interests</h3>
-                  <ul className="text-[#cccccc] space-y-1">
-                    <li>Chess</li>
-                    <li>LeetCode</li>
-                    <li>Painting</li>
-                  </ul>
-                </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
+                <h3 className="font-medium mb-2 text-[#E06C75]">Sports</h3>
+                <ul className="text-[#cccccc] flex flex-wrap gap-4">
+                  <li>Skiing</li>
+                  <li>Golfing</li>
+                  <li>Running</li>
+                  <li>Cycling</li>
+                  <li>Weightlifting</li>
+                </ul>
+              </div>
+              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
+                <h3 className="font-medium mb-2 text-[#E06C75]">Other Interests</h3>
+                <ul className="text-[#cccccc] flex flex-wrap gap-4">
+                  <li>LeetCode</li>
+                  <li>Chess</li>
+                  <li>Painting</li>
+                  <li>Reading</li>
+                  <li>Traveling</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -55,6 +62,7 @@ export default function Home() {
                     <li>React / Next.js</li>
                     <li>TypeScript</li>
                     <li>Tailwind CSS</li>
+                    <li>HTML/CSS</li>
                   </ul>
                 </div>
                 <div>
@@ -63,6 +71,7 @@ export default function Home() {
                     <li>Node.js</li>
                     <li>Python</li>
                     <li>PostgreSQL</li>
+                    <li>C++</li>
                   </ul>
                 </div>
                 <div>
@@ -71,6 +80,7 @@ export default function Home() {
                     <li>TensorFlow</li>
                     <li>PyTorch</li>
                     <li>Scikit-learn</li>
+                    <li>R</li>
                   </ul>
                 </div>
                 <div>

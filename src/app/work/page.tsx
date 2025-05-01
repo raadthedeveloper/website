@@ -6,19 +6,19 @@ export default function Work() {
   const projects = [
     {
       title: 'housedrift',
-      description: ["A web application for managing and tracking house sales, using AI to predict house prices and cashflows for future homeowners. Not open for public yet, private repository."],
+      description: ["A private web-based platform designed for intelligent management and tracking of residential property transactions. Leverages machine learning algorithms to forecast home valuations and project future homeowner cash flows, enabling data-driven decision-making in real estate. Currently under private development in a secured repository."],
       technologies: ['Next.js', 'Node.js', 'PostgreSQL', "React"],
       link: 'https://github.com/raadthedeveloper'
     },
     {
       title: 'planner',
-      description: 'AI event planner to take care of your event planning needs. Not open for public yet, private repository.',
+      description: 'An AI-powered event planning platform engineered to autonomously manage and optimize end-to-end event logistics. Integrates intelligent scheduling, resource allocation, and personalized recommendations to streamline the planning process. Currently in private development with a secured codebase.',
       technologies: ['React', 'Next.js', 'Node.js', 'Stripe','React'],
       link: 'https://github.com/raadthedeveloper'
     },
     {
       title: 'Addy Canada',
-      description: 'A web application for finding events in the area. Dissolved in 2019.',
+      description: 'A location-based web platform that enabled users to discover local events and seamlessly purchase tickets, food, and beverages within a unified interface. Designed with integrated payment processing and geospatial event filtering. The project was sunset in 2019.',
       technologies: ['React', 'Next.js', 'Node.js', 'Stripe','React'],
       link: 'https://github.com/raadthedeveloper'
     }
@@ -34,17 +34,17 @@ export default function Work() {
         "Modelled new treaty cells in AXIS from pricing to production by creating AXIS scripts in DataLink, batches, and rules tables",
         "Took initiative by engineering .dll files using C++ in Visual Studio to explore options in making AXIS processes/batches more efficient"
       ],
-      technologies: ["C++", "Moody's AXIS", "SQL", "Office 365"]
+      technologies: ["C++", "Moody's AXIS", "SQL"]
     },
     {
       title: "Software Engineer",
       company: "Synaply",
       period: "2024 - 2024",
-      description: "Engineer apart of a sales solution web application.",
+      description: "Contributed as a software engineer to the development of a sales intelligence web application that leverages AI to transform qualitative insights from sales representatives into actionable data. The platform empowers sales organizations to operationalize feedback loops and optimize performance through data-driven decision-making.",
       achievements: [
         "www.synaply.io"
       ],
-      technologies: ["React", "Next.JS", "Express"]
+      technologies: ["React", "Next.js", "Express"]
     },
     {
       title: "Actuarial Analyst",
