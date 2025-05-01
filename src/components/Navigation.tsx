@@ -13,7 +13,7 @@ export default function Navigation() {
     <div className="fixed top-0 left-0 right-0 z-50">
       {/* Top Bar */}
       <div className="h-8 bg-[#1e1e1e] flex items-center px-4">
-        <span className="text-[#cccccc] text-base font-medium">Raad Fakhrian</span>
+        <span className="text-[#cccccc] text-base font-medium">raad's env</span>
       </div>
 
       {/* Tab Bar */}

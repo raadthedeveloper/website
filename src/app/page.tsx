@@ -11,7 +11,7 @@ export default function Home() {
         <div className="flex-1">
           <div className="mb-8">
             <h1 className="text-5xl font-bold mb-6 text-[#C678DD]">
-              Hi, I'm Raad Fakhrian
+              hello world, it's raad fakhrian
             </h1>
             <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
               <p className="text-xl text-[#cccccc]">
@@ -81,7 +81,7 @@ export default function Home() {
                   className="flex items-center gap-2 text-[#cccccc] hover:text-white transition-colors"
                 >
                   <FaGithub className="text-2xl" />
-                  <span>GitHub</span>
+                  <span>check my git</span>
                 </a>
                 <a 
                   href="https://linkedin.com/in/raadfakhrian" 
@@ -90,7 +90,7 @@ export default function Home() {
                   className="flex items-center gap-2 text-[#cccccc] hover:text-white transition-colors"
                 >
                   <FaLinkedin className="text-2xl" />
-                  <span>LinkedIn</span>
+                  <span>let's link</span>
                 </a>
               </div>
             </div>

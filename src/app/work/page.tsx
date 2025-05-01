@@ -37,6 +37,16 @@ export default function Work() {
       technologies: ["C++", "Moody's AXIS", "SQL", "Office 365"]
     },
     {
+      title: "Software Engineer",
+      company: "Synaply",
+      period: "2024 - 2024",
+      description: "Engineer apart of a sales solution web application.",
+      achievements: [
+        "www.synaply.io"
+      ],
+      technologies: ["React", "Next.Js", "Express"]
+    },
+    {
       title: "Actuarial Analyst",
       company: "Foresters Financial",
       period: "2022 - 2024",
@@ -100,7 +110,20 @@ export default function Work() {
                   <p className="text-[#cccccc] mb-4">{exp.description}</p>
                   <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
                     {exp.achievements.map((achievement, i) => (
-                      <li key={i}>{achievement}</li>
+                      <li key={i}>
+                        {exp.company === "Synaply" ? (
+                          <a 
+                            href="https://www.synaply.io" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-[#61AFEF] hover:text-white transition-colors"
+                          >
+                            {achievement}
+                          </a>
+                        ) : (
+                          achievement
+                        )}
+                      </li>
                     ))}
                   </ul>
                   <div className="flex flex-wrap gap-2">

@@ -50,7 +50,7 @@ export default function Contact() {
                         className="flex items-center gap-2 text-[#cccccc] hover:text-white transition-colors"
                       >
                         <FaGithub className="text-2xl" />
-                        <span>GitHub</span>
+                        <span>check my git</span>
                       </a>
                       <a 
                         href="https://linkedin.com/in/raadfakhrian" 
@@ -59,7 +59,7 @@ export default function Contact() {
                         className="flex items-center gap-2 text-[#cccccc] hover:text-white transition-colors"
                       >
                         <FaLinkedin className="text-2xl" />
-                        <span>LinkedIn</span>
+                        <span>let's link</span>
                       </a>
                     </div>
                   </div>
