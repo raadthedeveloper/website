@@ -99,7 +99,7 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
                         <div className="pl-4">
                           <Link 
                             href={item.path}
-                            className={`flex items-center gap-2 px-2 py-[2px] text-[13px] rounded ${
+                            className={`flex items-center gap-2 px-2 py-[2px] text-[13px] rounded cursor-pointer ${
                               isActive ? 'bg-[#37373d]' : 'hover:bg-[#2a2d2e]'
                             }`}
                           >

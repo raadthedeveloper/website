@@ -25,7 +25,7 @@ export default function About() {
                   <li>Took initiative by engineering .dll files using C++ in Visual Studio to explore options in making AXIS processes/batches more efficient</li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
-                  {["C++", "Moody's AXIS", "SQL", "Office 365"].map((tech, techIndex) => (
+                  {["C++", "Moody's AXIS", "SQL"].map((tech, techIndex) => (
                     <span 
                       key={techIndex}
                       className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
@@ -44,7 +44,7 @@ export default function About() {
                   </div>
                   <span className="text-[#858585]">2024 - 2024</span>
                 </div>
-                <p className="text-[#cccccc] mb-4">Engineer apart of a sales solution web application.</p>
+                <p className="text-[#cccccc] mb-4">Contributed as a software engineer to the development of a sales intelligence web application that leverages AI to transform qualitative insights from sales representatives into actionable data. The platform empowers sales organizations to operationalize feedback loops and optimize performance through data-driven decision-making.</p>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
                   <li><a href="https://www.synaply.io" target="_blank" rel="noopener noreferrer" className="text-[#61AFEF] hover:text-white transition-colors">www.synaply.io</a></li>
                 </ul>
