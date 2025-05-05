@@ -151,8 +151,16 @@ export default function NotFound() {
   return (
     <PageLayout filePath="src/app/not-found.tsx">
       <div className="flex flex-col items-center justify-center h-[70vh]">
-        <h1 className="text-4xl font-bold text-[#C678DD] mb-4">404</h1>
-        <p className="text-lg text-[#cccccc] mb-8">how'd you get here..?</p>
+        <div className="bg-[#232323] border border-[#3e3e42] rounded-lg p-6 mb-8 max-w-xl text-[#cccccc] text-center text-base">
+          Hi 👋 My Name Is Raad 🗿🤘<br />
+          Locked in 💻 Caffeine-coded ☕<br />
+          Building empires one commit at a time 🚀<br />
+          Unavailable for work...<br />
+          Building something too dangerous to demo 🔒<br />
+          10x engineer in a 1x world 🧠<br />
+          Sleeping is a memory leak ⚠️<br />
+          Code. Lift. Repeat. 🏋️‍♂️
+        </div>
         <HangmanGame />
       </div>
     </PageLayout>
