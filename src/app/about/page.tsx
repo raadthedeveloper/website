@@ -122,14 +122,6 @@ export default function About() {
             </div>
           </div>
         </div>
-
-        <div className="w-[800px] h-[950px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
-          <img 
-            src="/uhhpicofme6.jpg" 
-            alt="Raad Fakhrian" 
-            className="w-full h-full object-cover"
-          />
-        </div>
       </div>
     </PageLayout>
   );

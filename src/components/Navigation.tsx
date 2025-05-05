@@ -11,15 +11,15 @@ export default function Navigation() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
-      {/* Top Bar */}
-      <div className="h-8 bg-[#1e1e1e] flex items-center px-4">
+      {/* Top Bar - hidden on mobile */}
+      <div className="h-8 bg-[#1e1e1e] flex items-center px-4 hidden sm:flex">
         <span className="text-[#cccccc] text-base font-medium">raad's env</span>
       </div>
 
       {/* Tab Bar */}
       <div className="h-10 bg-[#252526] flex items-center border-b border-[#3e3e42]">
-        {/* Side Icons with Dropdown */}
-        <div className="flex h-full border-r border-[#3e3e42] items-center pr-1">
+        {/* Side Icons with Dropdown - hidden on mobile */}
+        <div className="hidden sm:flex h-full border-r border-[#3e3e42] items-center pr-1">
           <div className="flex items-center">
             <button className="px-3 text-[#cccccc] hover:text-white">
               <VscFiles size={16} />
@@ -39,8 +39,8 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Tabs */}
-        <div className="flex">
+        {/* Tabs - always visible, horizontally scrollable on mobile */}
+        <div className="flex flex-1 overflow-x-auto no-scrollbar">
           {[
             { path: '/', label: 'page.tsx' },
             { path: '/about', label: 'page.tsx' },
@@ -51,13 +51,13 @@ export default function Navigation() {
             <Link
               key={index}
               href={item.path}
-              className={`flex items-center h-10 px-4 border-t border-l border-r border-transparent group ${
+              className={`flex items-center h-10 px-3 sm:px-4 border-t border-l border-r border-transparent group whitespace-nowrap text-xs sm:text-sm ${
                 isActive(item.path)
                   ? 'bg-[#1e1e1e] text-white border-[#3e3e42]'
                   : 'text-[#969696] hover:text-white'
               }`}
             >
-              <span className="text-sm">
+              <span>
                 {item.path === '/' ? 'home' : item.path.slice(1)}.tsx
               </span>
               {isActive(item.path) && (

@@ -30,7 +30,7 @@ export default function Contact() {
     <PageLayout filePath="src/app/contact/page.tsx">
       <div className="text-[#cccccc] flex gap-8">
         <div className="flex-1">
-          <div className="bg-[#252526] p-8 rounded-lg border border-[#3e3e42]">
+          <div className="bg-[#252526] p-8 rounded-lg border border-[#3e3e42] mb-8 w-full">
             <div className="grid grid-cols-1 gap-12">
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Contact Information</h2>
@@ -137,7 +137,17 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="w-[800px] h-[885px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        {/* On mobile, image is below text and full width; on desktop, side-by-side */}
+        <div className="block lg:hidden mt-8 w-full">
+          <div className="w-full h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
+            <img 
+              src="/uhhpicofme5.jpg" 
+              alt="Raad Fakhrian" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div className="hidden lg:block w-[800px] h-[1000px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme5.jpg" 
             alt="Raad Fakhrian" 

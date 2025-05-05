@@ -7,7 +7,7 @@ import PageLayout from '../components/PageLayout';
 export default function Home() {
   return (
     <PageLayout filePath="src/app/page.tsx">
-      <div className="text-[#cccccc] flex gap-8">
+      <div className="text-[#cccccc] flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
           <div className="mb-8">
             <h1 className="text-5xl font-bold mb-6 text-[#C678DD]">
@@ -54,8 +54,8 @@ export default function Home() {
 
           <div>
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Skills</h2>
-            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-              <div className="grid grid-cols-4 gap-6 mb-6">
+            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42] mb-8 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
                 <div>
                   <h3 className="font-medium mb-2 text-[#E06C75]">Frontend</h3>
                   <ul className="text-[#cccccc] space-y-1">
@@ -117,7 +117,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[800px] h-[760px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="block lg:hidden mt-8 w-full">
+          <div className="w-full h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
+            <img 
+              src="/uhhpicofme3.jpg" 
+              alt="Raad Fakhrian" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div className="hidden lg:block w-[800px] h-[756px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme3.jpg" 
             alt="Raad Fakhrian" 

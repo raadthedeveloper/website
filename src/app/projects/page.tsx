@@ -61,38 +61,58 @@ export default function Projects() {
 
   return (
     <PageLayout filePath="src/app/projects/page.tsx">
-      <div className="text-[#cccccc]">
-        <div className="space-y-16">
-          {/* Projects Section */}
-          <div>
-            <h2 className="text-3xl font-bold mb-8 text-[#C678DD]">Featured Projects</h2>
-            <div className="flex flex-col gap-8">
-              {projects.map((project, index) => (
-                <div key={index} className="bg-[#252526] rounded-lg overflow-hidden shadow-lg border border-[#3e3e42]">
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">{project.title}</h3>
-                    <p className="text-[#cccccc] mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex}
-                          className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+      <div className="text-[#cccccc] flex flex-col lg:flex-row gap-8">
+        <div className="flex-1">
+          <div className="space-y-16">
+            {/* Projects Section */}
+            <div>
+              <h2 className="text-3xl font-bold mb-8 text-[#C678DD]">Featured Projects</h2>
+              <div className="flex flex-col gap-8">
+                {projects.map((project, index) => (
+                  <div key={index} className="bg-[#252526] rounded-lg overflow-hidden shadow-lg border border-[#3e3e42]">
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">{project.title}</h3>
+                      <p className="text-[#cccccc] mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech, techIndex) => (
+                          <span 
+                            key={techIndex}
+                            className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <a 
+                        href={project.link}
+                        className="inline-block bg-[#454545] text-[#cccccc] px-4 py-2 rounded-lg hover:bg-[#505050] transition-colors"
+                      >
+                        View Project
+                      </a>
                     </div>
-                    <a 
-                      href={project.link}
-                      className="inline-block bg-[#454545] text-[#cccccc] px-4 py-2 rounded-lg hover:bg-[#505050] transition-colors"
-                    >
-                      View Project
-                    </a>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* On mobile, image is below text and full width; on desktop, side-by-side */}
+        <div className="block lg:hidden mt-8 w-full">
+          <div className="w-full h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
+            <img 
+              src="/uhhpicofme6.jpg" 
+              alt="Raad Fakhrian" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div className="hidden lg:block w-[800px] h-[885px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+          <img 
+            src="/uhhpicofme6.jpg" 
+            alt="Raad Fakhrian" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </PageLayout>
