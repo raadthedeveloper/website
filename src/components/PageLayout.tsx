@@ -37,7 +37,8 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
     { path: '/', label: 'page.tsx', parent: 'src/app' },
     { path: '/about', label: 'page.tsx', parent: 'src/app/about' },
     { path: '/work', label: 'page.tsx', parent: 'src/app/work' },
-    { path: '/contact', label: 'page.tsx', parent: 'src/app/contact' }
+    { path: '/contact', label: 'page.tsx', parent: 'src/app/contact' },
+    { path: '/game', label: 'page.tsx', parent: 'src/app/game' }
   ];
 
   const nonInteractiveItems = [

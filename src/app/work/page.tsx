@@ -66,7 +66,7 @@ export default function Work() {
           {/* Projects Section */}
           <div>
             <h2 className="text-3xl font-bold mb-8 text-[#C678DD]">Featured Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="flex flex-col gap-8">
               {projects.map((project, index) => (
                 <div key={index} className="bg-[#252526] rounded-lg overflow-hidden shadow-lg border border-[#3e3e42]">
                   <div className="p-6">
@@ -88,53 +88,6 @@ export default function Work() {
                     >
                       View Project
                     </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Experience Section */}
-          <div>
-            <h2 className="text-3xl font-bold mb-8 text-[#C678DD]">Professional Experience</h2>
-            <div className="space-y-8">
-              {experiences.map((exp, index) => (
-                <div key={index} className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-[#E06C75]">{exp.title}</h3>
-                      <p className="text-[#61AFEF]">{exp.company}</p>
-                    </div>
-                    <span className="text-[#858585]">{exp.period}</span>
-                  </div>
-                  <p className="text-[#cccccc] mb-4">{exp.description}</p>
-                  <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i}>
-                        {exp.company === "Synaply" ? (
-                          <a 
-                            href="https://www.synaply.io" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="text-[#61AFEF] hover:text-white transition-colors"
-                          >
-                            {achievement}
-                          </a>
-                        ) : (
-                          achievement
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech, techIndex) => (
-                      <span 
-                        key={techIndex}
-                        className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
-                      >
-                        {tech}
-                      </span>
-                    ))}
                   </div>
                 </div>
               ))}
