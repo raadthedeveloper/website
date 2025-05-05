@@ -62,8 +62,8 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
   return (
     <div className="min-h-screen bg-[#1e1e1e] flex flex-col pt-[72px]">
       <div className="flex-1 flex pb-64">
-        {/* Left Navigation */}
-        <div className="fixed left-0 top-[72px] bottom-0 w-64 bg-[#252526] border-r border-[#3e3e42] text-[#cccccc] overflow-y-auto">
+        {/* Left Navigation - hidden on mobile */}
+        <div className="hidden sm:block fixed left-0 top-[72px] bottom-0 w-64 bg-[#252526] border-r border-[#3e3e42] text-[#cccccc] overflow-y-auto">
           <div className="p-2">
             <div className="uppercase text-[11px] text-[#858585] font-medium px-2 py-1 border-b border-[#3e3e42]">
               Website
@@ -126,7 +126,7 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
         </div>
 
         {/* Main content area with fixed left margin for explorer */}
-        <div className="flex-1 ml-64 overflow-auto">
+        <div className="flex-1 sm:ml-64 overflow-auto">
           {/* File path header */}
           <div className="fixed top-[72px] left-64 right-0 bg-[#252526] border-b border-[#3e3e42] px-4 py-2 text-[#cccccc] flex items-center gap-2 text-sm z-10">
             {pathSegments.map((segment, index) => {
@@ -170,7 +170,7 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
       </div>
 
       {/* Terminal */}
-      <div className="fixed bottom-0 left-64 right-0 h-64 bg-[#1e1e1e] border-t border-[#3e3e42]">
+      <div className="hidden sm:block fixed bottom-0 left-64 right-0 h-64 bg-[#1e1e1e] border-t border-[#3e3e42]">
         {/* Terminal Top Bar */}
         <div className="flex items-center border-b border-[#3e3e42] bg-[#252526] text-[#cccccc] text-xs">
           <div className="flex items-center">
