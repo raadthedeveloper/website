@@ -34,7 +34,7 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
   }, [children]);
 
   const navItems = [
-    { path: '/', label: 'page.tsx', parent: 'src/app' },
+    { path: '/', label: 'page.tsx', parent: 'src/app/home' },
     { path: '/about', label: 'page.tsx', parent: 'src/app/about' },
     { path: '/projects', label: 'page.tsx', parent: 'src/app/projects' },
     { path: '/contact', label: 'page.tsx', parent: 'src/app/contact' },

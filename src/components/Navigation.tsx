@@ -58,7 +58,7 @@ export default function Navigation() {
               }`}
             >
               <span className="text-sm">
-                {item.path === '/' ? 'home/' : item.path.slice(1) + '/'}{item.label}
+                {item.path === '/' ? 'home' : item.path.slice(1)}.tsx
               </span>
               {isActive(item.path) && (
                 <button className="ml-2 p-1 hover:bg-[#3e3e42] rounded">

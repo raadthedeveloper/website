@@ -117,7 +117,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[800px] h-[745px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="w-[800px] h-[760px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme3.jpg" 
             alt="Raad Fakhrian" 
