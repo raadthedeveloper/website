@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import PageLayout from '../../components/PageLayout';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -11,11 +12,32 @@ export default function Contact() {
     subject: '',
     message: ''
   });
+  const [statusMsg, setStatusMsg] = useState<string | null>(null);
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setSending(true);
+    setStatusMsg(null);
+    try {
+      const result = await emailjs.send(
+        'service_4sz5t2j', // replace with your EmailJS service ID
+        'template_kk7l6k5', // replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        },
+        '4u9fwk_Ske4ybK7E-' // replace with your EmailJS public key
+      );
+      setStatusMsg('✅ Message sent successfully!');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      setStatusMsg('❌ Failed to send message. Please try again.');
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -119,10 +141,14 @@ export default function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-[#264f78] text-[#cccccc] py-3 rounded-lg hover:bg-[#365373] transition-colors"
+                    className="w-full bg-[#264f78] text-[#cccccc] py-3 rounded-lg hover:bg-[#365373] transition-colors disabled:opacity-60"
+                    disabled={sending}
                   >
-                    Send Message
+                    {sending ? 'Sending...' : 'Send Message'}
                   </button>
+                  {statusMsg && (
+                    <div className={`text-center mt-2 ${statusMsg.startsWith('✅') ? 'text-[#98C379]' : 'text-[#E06C75]'}`}>{statusMsg}</div>
+                  )}
                 </form>
               </div>
             </div>
