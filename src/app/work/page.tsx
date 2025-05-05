@@ -18,7 +18,7 @@ export default function Work() {
     },
     {
       title: 'Addy Canada',
-      description: 'A location-based web platform that enabled users to discover local events and seamlessly purchase tickets, food, and beverages within a unified interface. Designed with integrated payment processing and geospatial event filtering. The project was sunset in 2019.',
+      description: 'A location-based web platform that enabled users to discover local events and seamlessly purchase tickets, food, and beverages within a unified interface. Designed with integrated payment processing and geospatial event filtering. The project was dissolved in 2019.',
       technologies: ['React', 'Next.js', 'Node.js', 'Stripe','React'],
       link: 'https://github.com/raadthedeveloper'
     }
