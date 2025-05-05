@@ -108,17 +108,40 @@ export default function GamePage() {
     try {
       // eslint-disable-next-line no-new-func
       let fn;
+      let passed = false;
       if (problemIdx === 0) {
         fn = new Function('nums', 'target', code + '\nreturn twoSum(nums, target);');
-        const passed = problems[0].test(fn as any);
-        setStatus(passed ? 'success' : 'fail');
-        setOutput(passed ? '✅ Correct!' : '❌ Incorrect. Try again!');
+        passed = problems[0].test(fn as any);
       } else if (problemIdx === 1) {
         fn = new Function('s', code + '\nreturn reverseString(s);');
-        const passed = problems[1].test(fn as any);
-        setStatus(passed ? 'success' : 'fail');
-        setOutput(passed ? '✅ Correct!' : '❌ Incorrect. Try again!');
+        passed = problems[1].test(fn as any);
+      } else if (problemIdx === 2) {
+        fn = new Function('x', code + '\nreturn isPalindrome(x);');
+        passed = problems[2].test(fn as any);
+      } else if (problemIdx === 3) {
+        fn = new Function('n', code + '\nreturn fizzBuzz(n);');
+        passed = problems[3].test(fn as any);
+      } else if (problemIdx === 4) {
+        fn = new Function('nums1', 'nums2', code + '\nreturn findMedianSortedArrays(nums1, nums2);');
+        passed = problems[4].test(fn as any);
+      } else if (problemIdx === 5) {
+        fn = new Function('height', code + '\nreturn trap(height);');
+        passed = problems[5].test(fn as any);
+      } else if (problemIdx === 6) {
+        fn = new Function('word1', 'word2', code + '\nreturn minDistance(word1, word2);');
+        passed = problems[6].test(fn as any);
+      } else if (problemIdx === 7) {
+        fn = new Function('s', 'p', code + '\nreturn isMatch(s, p);');
+        passed = problems[7].test(fn as any);
+      } else if (problemIdx === 8) {
+        fn = new Function('lists', code + '\nreturn mergeKLists(lists);');
+        passed = problems[8].test(fn as any);
+      } else if (problemIdx === 9) {
+        fn = new Function('s', code + '\nreturn longestValidParentheses(s);');
+        passed = problems[9].test(fn as any);
       }
+      setStatus(passed ? 'success' : 'fail');
+      setOutput(passed ? '✅ Correct!' : '❌ Incorrect. Try again!');
     } catch (e: any) {
       setStatus('fail');
       setOutput('Error: ' + e.message);
@@ -136,7 +159,8 @@ export default function GamePage() {
 
   return (
     <PageLayout filePath="src/app/game/page.tsx">
-      <div className="flex flex-col gap-8 p-6 w-full">
+      <div className="flex flex-col gap-8 p-2 w-full">
+      <h2 className="text-2xl font-semibold mb-2 sm:mb-4 text-[#C678DD]">time to grind</h2>
         {/* Problem Selector */}
         <div className="mb-2 flex flex-wrap items-center gap-4">
           <label htmlFor="problem-select" className="text-[#cccccc] font-semibold">Choose a problem:</label>

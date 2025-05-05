@@ -33,10 +33,9 @@ export default function Contact() {
           <div className="bg-[#252526] p-4 sm:p-8 rounded-lg border border-[#3e3e42] mb-6 sm:mb-8 w-full">
             <div className="grid grid-cols-1 gap-6 sm:gap-12">
               <div>
-                <h2 className="text-2xl font-semibold mb-2 sm:mb-4 text-[#C678DD]">Contact Information</h2>
+                <h2 className="text-2xl font-semibold mb-2 sm:mb-4 text-[#C678DD]">Contact</h2>
                 <p className="text-[#cccccc] mb-4 sm:mb-8">
-                  I'm always interested in hearing about new projects and opportunities. 
-                  Feel free to reach out through the form or via social media.
+                  let's get in touch.
                 </p>
                 <div className="space-y-2 sm:space-y-4 mb-4 sm:mb-8">
                   <div>
@@ -139,7 +138,7 @@ export default function Contact() {
             />
           </div>
         </div>
-        <div className="hidden lg:block w-[800px] h-[885px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="hidden lg:block w-[800px] h-[862px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme5.jpg" 
             alt="Raad Fakhrian" 

@@ -44,8 +44,9 @@ export default function About() {
                   </div>
                   <span className="text-[#858585]">2024 - 2024</span>
                 </div>
-                <p className="text-[#cccccc] mb-4">Contributed as a software engineer to the development of a sales intelligence web application that leverages AI to transform qualitative insights from sales representatives into actionable data. The platform empowers sales organizations to operationalize feedback loops and optimize performance through data-driven decision-making.</p>
+                <p className="text-[#cccccc] mb-4">Apart of the engineering team.</p>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
+                  <li>Contributed as a software engineer to the development of a sales intelligence web application that leverages AI to transform qualitative insights from sales representatives into actionable data.</li>
                   <li><a href="https://www.synaply.io" target="_blank" rel="noopener noreferrer" className="text-[#61AFEF] hover:text-white transition-colors">www.synaply.io</a></li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
@@ -70,7 +71,7 @@ export default function About() {
                 </div>
                 <p className="text-[#cccccc] mb-4">Apart of the capital management team, problem solving for capital adequacy and solvency requirements.</p>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
-                  <li>Enhanced team efficiency by developing a SQL stored procedure, automating the removal of unused segmentation rows and line items from data tables, streamlining our roll-up procedure and expediting results delivery</li>
+                  <li>Developed SQL stored procedures to solve complex problems</li>
                   <li>Created robust automation solutions using VBA, enabling the seamless execution of various tasks independently and achieving remarkable efficiency gains with manual process times reduced by up to 90%</li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
