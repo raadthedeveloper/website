@@ -7,13 +7,13 @@ import PageLayout from '../components/PageLayout';
 export default function Home() {
   return (
     <PageLayout filePath="src/app/page.tsx">
-      <div className="text-[#cccccc] flex flex-col lg:flex-row gap-8">
+      <div className="text-[#cccccc] flex flex-col lg:flex-row gap-8 pt-2 sm:pt-0">
         <div className="flex-1">
-          <div className="mb-8">
-            <h1 className="text-5xl font-bold mb-6 text-[#C678DD]">
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-5xl font-bold mb-4 sm:mb-6 text-[#C678DD]">
               hello world, i'm raad
             </h1>
-            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
+            <div className="bg-[#252526] p-4 sm:p-6 rounded-lg border border-[#3e3e42]">
               <p className="text-[#cccccc]">
               I'm an actuarial professional with a strong foundation in insurance analytics, 
               complemented by my work as an independent software engineer focused on high-performance, 
@@ -26,12 +26,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Hobbies</h2>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-                <h3 className="font-medium mb-2 text-[#E06C75]">Sports</h3>
-                <ul className="text-[#cccccc] flex flex-wrap gap-4">
+          <div className="mb-6 sm:mb-8">
+            <h2 className="text-2xl font-semibold mb-2 sm:mb-4 text-[#C678DD]">Hobbies</h2>
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
+              <div className="bg-[#252526] p-4 sm:p-6 rounded-lg border border-[#3e3e42]">
+                <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">Sports</h3>
+                <ul className="text-[#cccccc] flex flex-wrap gap-2 sm:gap-4">
                   <li>Skiing</li>
                   <li>Golfing</li>
                   <li>Running</li>
@@ -39,9 +39,9 @@ export default function Home() {
                   <li>Weightlifting</li>
                 </ul>
               </div>
-              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
-                <h3 className="font-medium mb-2 text-[#E06C75]">Other Interests</h3>
-                <ul className="text-[#cccccc] flex flex-wrap gap-4">
+              <div className="bg-[#252526] p-4 sm:p-6 rounded-lg border border-[#3e3e42]">
+                <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">Other Interests</h3>
+                <ul className="text-[#cccccc] flex flex-wrap gap-2 sm:gap-4">
                   <li>LeetCode</li>
                   <li>Chess</li>
                   <li>Painting</li>
@@ -53,11 +53,11 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Skills</h2>
-            <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42] mb-8 w-full">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <h2 className="text-2xl font-semibold mb-2 sm:mb-4 text-[#C678DD]">Skills</h2>
+            <div className="bg-[#252526] p-4 sm:p-6 rounded-lg border border-[#3e3e42] mb-0 sm:mb-8 w-full">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-4 sm:mb-6">
                 <div>
-                  <h3 className="font-medium mb-2 text-[#E06C75]">Frontend</h3>
+                  <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">Frontend</h3>
                   <ul className="text-[#cccccc] space-y-1">
                     <li>React / Next.js</li>
                     <li>TypeScript</li>
@@ -66,7 +66,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-medium mb-2 text-[#E06C75]">Backend</h3>
+                  <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">Backend</h3>
                   <ul className="text-[#cccccc] space-y-1">
                     <li>Node.js</li>
                     <li>Python</li>
@@ -75,7 +75,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-medium mb-2 text-[#E06C75]">ML/AI</h3>
+                  <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">ML/AI</h3>
                   <ul className="text-[#cccccc] space-y-1">
                     <li>TensorFlow</li>
                     <li>PyTorch</li>
@@ -84,7 +84,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-medium mb-2 text-[#E06C75]">Tools</h3>
+                  <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">Tools</h3>
                   <ul className="text-[#cccccc] space-y-1">
                     <li>Moody's AXIS</li>
                     <li>Git</li>
@@ -93,7 +93,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="flex justify-center gap-6 pt-4 border-t border-[#3e3e42]">
+              <div className="flex justify-center gap-3 sm:gap-6 pt-2 sm:pt-4 border-t border-[#3e3e42]">
                 <a 
                   href="https://github.com/raadthedeveloper"
                   target="_blank" 
@@ -117,8 +117,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="block lg:hidden mt-8 w-full">
-          <div className="w-full h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
+        <div className="block lg:hidden mt-2 sm:mt-8 w-full">
+          <div className="w-full h-[340px] sm:h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
             <img 
               src="/uhhpicofme3.jpg" 
               alt="Raad Fakhrian" 

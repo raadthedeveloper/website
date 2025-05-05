@@ -28,21 +28,20 @@ export default function Contact() {
 
   return (
     <PageLayout filePath="src/app/contact/page.tsx">
-      <div className="text-[#cccccc] flex gap-8">
-        <div className="flex-1">
-          <div className="bg-[#252526] p-8 rounded-lg border border-[#3e3e42] mb-8 w-full">
-            <div className="grid grid-cols-1 gap-12">
+      <div className="text-[#cccccc] flex flex-col lg:flex-row gap-8">
+        <div className="flex-1 w-full">
+          <div className="bg-[#252526] p-4 sm:p-8 rounded-lg border border-[#3e3e42] mb-6 sm:mb-8 w-full">
+            <div className="grid grid-cols-1 gap-6 sm:gap-12">
               <div>
-                <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Contact Information</h2>
-                <p className="text-[#cccccc] mb-8">
+                <h2 className="text-2xl font-semibold mb-2 sm:mb-4 text-[#C678DD]">Contact Information</h2>
+                <p className="text-[#cccccc] mb-4 sm:mb-8">
                   I'm always interested in hearing about new projects and opportunities. 
                   Feel free to reach out through the form or via social media.
                 </p>
-                
-                <div className="space-y-4 mb-8">
+                <div className="space-y-2 sm:space-y-4 mb-4 sm:mb-8">
                   <div>
-                    <h3 className="font-medium mb-2 text-[#E06C75]">Social Media</h3>
-                    <div className="flex gap-6">
+                    <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">Social Media</h3>
+                    <div className="flex flex-row gap-2 sm:gap-6">
                       <a 
                         href="https://github.com/raadthedeveloper"
                         target="_blank" 
@@ -63,16 +62,14 @@ export default function Contact() {
                       </a>
                     </div>
                   </div>
-
                   <div>
-                    <h3 className="font-medium mb-2 text-[#E06C75]">Email</h3>
+                    <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">Email</h3>
                     <a href="mailto:raad.fakhrian@gmail.com" className="text-[#cccccc] hover:text-white transition-colors">
                       raad.fakhrian@gmail.com
                     </a>
                   </div>
                 </div>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 w-full">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-[#E06C75] mb-1">Name</label>
                     <input
@@ -85,7 +82,6 @@ export default function Contact() {
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-[#E06C75] mb-1">Email</label>
                     <input
@@ -98,7 +94,6 @@ export default function Contact() {
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-[#E06C75] mb-1">Subject</label>
                     <input
@@ -111,7 +106,6 @@ export default function Contact() {
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-[#E06C75] mb-1">Message</label>
                     <textarea
@@ -124,7 +118,6 @@ export default function Contact() {
                       required
                     />
                   </div>
-                  
                   <button
                     type="submit"
                     className="w-full bg-[#264f78] text-[#cccccc] py-3 rounded-lg hover:bg-[#365373] transition-colors"
@@ -136,10 +129,9 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
-        {/* On mobile, image is below text and full width; on desktop, side-by-side */}
-        <div className="block lg:hidden mt-8 w-full">
-          <div className="w-full h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
+        {/* On mobile, image is at the bottom and full width; on desktop, side-by-side */}
+        <div className="block lg:hidden mt-2 sm:mt-8 w-full order-last">
+          <div className="w-full h-[340px] sm:h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
             <img 
               src="/uhhpicofme5.jpg" 
               alt="Raad Fakhrian" 

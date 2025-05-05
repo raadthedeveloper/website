@@ -40,7 +40,7 @@ export default function Navigation() {
         </div>
 
         {/* Tabs - always visible, horizontally scrollable on mobile */}
-        <div className="flex flex-1 overflow-x-auto no-scrollbar">
+        <div className="flex flex-1 flex-wrap sm:flex-nowrap overflow-x-auto no-scrollbar">
           {[
             { path: '/', label: 'page.tsx' },
             { path: '/about', label: 'page.tsx' },
@@ -51,7 +51,7 @@ export default function Navigation() {
             <Link
               key={index}
               href={item.path}
-              className={`flex items-center h-10 px-3 sm:px-4 border-t border-l border-r border-transparent group whitespace-nowrap text-xs sm:text-sm ${
+              className={`flex items-center h-10 px-2 sm:px-4 border-t border-l border-r border-transparent group whitespace-nowrap text-[11px] sm:text-sm ${
                 isActive(item.path)
                   ? 'bg-[#1e1e1e] text-white border-[#3e3e42]'
                   : 'text-[#969696] hover:text-white'

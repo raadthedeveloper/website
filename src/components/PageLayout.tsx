@@ -60,8 +60,8 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1e1e1e] flex flex-col pt-[72px]">
-      <div className="flex-1 flex pb-64">
+    <div className="min-h-screen bg-[#1e1e1e] flex flex-col pt-10 sm:pt-[72px]">
+      <div className="flex-1 flex pb-0 sm:pb-64">
         {/* Left Navigation - hidden on mobile */}
         <div className="hidden sm:block fixed left-0 top-[72px] bottom-0 w-64 bg-[#252526] border-r border-[#3e3e42] text-[#cccccc] overflow-y-auto">
           <div className="p-2">
@@ -127,41 +127,29 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
 
         {/* Main content area with fixed left margin for explorer */}
         <div className="flex-1 sm:ml-64 overflow-auto">
-          {/* File path header */}
-          <div className="fixed top-[72px] left-64 right-0 bg-[#252526] border-b border-[#3e3e42] px-4 py-2 text-[#cccccc] flex items-center gap-2 text-sm z-10">
-            {pathSegments.map((segment, index) => {
-              const pathUpToHere = pathSegments.slice(0, index + 1).join('/');
-              return (
-                <span key={index} className="flex items-center">
-                  {index > 0 && <span className="text-[#666666] mx-1">›</span>}
-                  <Link 
-                    href={index === pathSegments.length - 1 ? pathname : `/${pathUpToHere}`}
-                    className={`hover:text-[#cccccc] ${
-                      index === pathSegments.length - 1 ? 'text-[#cccccc]' : 'text-[#858585]'
-                    }`}
-                  >
-                    {segment}
-                  </Link>
-                </span>
-              );
-            })}
+          {/* File path breadcrumb bar - horizontal, above content, desktop only */}
+          <div className="hidden sm:flex items-center gap-2 px-6 pt-4 pb-2 text-[#cccccc] text-sm whitespace-nowrap">
+            {pathSegments.map((segment, index) => (
+              <span key={index} className="flex items-center">
+                {index > 0 && <span className="mx-1 text-[#666666]">›</span>}
+                <span className={index === pathSegments.length - 1 ? 'font-semibold text-white' : 'text-[#858585]'}>{segment}</span>
+              </span>
+            ))}
           </div>
-
-          {/* Content area with padding for fixed header */}
-          <div className="pt-9">
+          {/* Content area */}
+          <div className="pt-0 sm:pt-2">
             {/* Main content with line numbers */}
             <div className="flex relative min-h-full">
               {/* Line numbers */}
-              <div className="sticky left-0 w-12 text-right pr-4 text-[#858585] select-none bg-[#1e1e1e] border-r border-[#3e3e42] text-xs">
+              <div className="hidden sm:block sticky left-0 w-12 text-right pr-4 text-[#858585] select-none bg-[#1e1e1e] border-r border-[#3e3e42] text-xs">
                 {Array.from({ length: lineCount }, (_, i) => (
                   <div key={i} className="leading-[21px] text-right w-full pr-2 tabular-nums">
                     {i + 1}
                   </div>
                 ))}
               </div>
-
               {/* Content */}
-              <div ref={contentRef} className="flex-1 p-4 min-w-0">
+              <div ref={contentRef} className="flex-1 p-4 min-w-0 text-sm sm:text-base">
                 {children}
               </div>
             </div>

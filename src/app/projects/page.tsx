@@ -63,17 +63,17 @@ export default function Projects() {
     <PageLayout filePath="src/app/projects/page.tsx">
       <div className="text-[#cccccc] flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
-          <div className="space-y-16">
+          <div className="space-y-8 sm:space-y-16">
             {/* Projects Section */}
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-[#C678DD]">Featured Projects</h2>
-              <div className="flex flex-col gap-8">
+              <h2 className="text-3xl font-bold mb-4 sm:mb-8 text-[#C678DD]">Featured Projects</h2>
+              <div className="flex flex-col gap-4 sm:gap-8">
                 {projects.map((project, index) => (
                   <div key={index} className="bg-[#252526] rounded-lg overflow-hidden shadow-lg border border-[#3e3e42]">
-                    <div className="p-6">
+                    <div className="p-4 sm:p-6">
                       <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">{project.title}</h3>
-                      <p className="text-[#cccccc] mb-4">{project.description}</p>
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <p className="text-[#cccccc] mb-2 sm:mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
                         {project.technologies.map((tech, techIndex) => (
                           <span 
                             key={techIndex}
@@ -98,8 +98,8 @@ export default function Projects() {
         </div>
 
         {/* On mobile, image is below text and full width; on desktop, side-by-side */}
-        <div className="block lg:hidden mt-8 w-full">
-          <div className="w-full h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
+        <div className="block lg:hidden mt-2 sm:mt-8 w-full">
+          <div className="w-full h-[340px] sm:h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
             <img 
               src="/uhhpicofme6.jpg" 
               alt="Raad Fakhrian" 
