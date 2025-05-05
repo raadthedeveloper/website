@@ -108,7 +108,7 @@ export default function About() {
                       <span className="text-[#cccccc]">Exam P, Exam FM</span>
                       <span className="text-[#858585]">2022</span>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between gap-x-2">
                       <span className="text-[#cccccc]">Exam SRM, Exam PA, Exam ATPA, Exam FAM</span>
                       <span className="text-[#858585]">2023</span>
                     </div>

@@ -139,7 +139,7 @@ export default function Contact() {
             />
           </div>
         </div>
-        <div className="hidden lg:block w-[800px] h-[1000px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="hidden lg:block w-[800px] h-[885px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme5.jpg" 
             alt="Raad Fakhrian" 

@@ -15,13 +15,9 @@ export default function Home() {
             </h1>
             <div className="bg-[#252526] p-4 sm:p-6 rounded-lg border border-[#3e3e42]">
               <p className="text-[#cccccc]">
-              I'm an actuarial professional with a strong foundation in insurance analytics, 
-              complemented by my work as an independent software engineer focused on high-performance, 
-              cross-functional systems. My expertise spans full-stack application architecture, 
-              machine learning model deployment, and the automation of actuarial and financial workflows 
-              across diverse programming environments. I am driven by the challenge of deconstructing complex 
-              problems and engineering elegant, data-informed solutions that integrate seamlessly across 
-              business and technology domains.
+                I'm an actuarial professional with a strong foundation in insurance analytics, complemented by my work as an independent software engineer focused on high-performance, cross-functional systems.<br /><br />
+                My expertise spans full-stack application architecture, machine learning model deployment, and the automation of actuarial and financial workflows across diverse programming environments.<br /><br />
+                I'm driven by the challenge of deconstructing complex problems and engineering elegant, data-informed solutions that integrate seamlessly across business and technology domains.
               </p>
             </div>
           </div>
@@ -126,7 +122,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="hidden lg:block w-[800px] h-[756px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="hidden lg:block w-[800px] h-[832px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme3.jpg" 
             alt="Raad Fakhrian" 

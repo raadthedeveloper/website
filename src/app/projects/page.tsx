@@ -107,7 +107,7 @@ export default function Projects() {
             />
           </div>
         </div>
-        <div className="hidden lg:block w-[800px] h-[885px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="hidden lg:block w-[800px] h-[908px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme6.jpg" 
             alt="Raad Fakhrian" 
