@@ -44,7 +44,7 @@ export default function Navigation() {
           {[
             { path: '/', label: 'page.tsx' },
             { path: '/about', label: 'page.tsx' },
-            { path: '/work', label: 'page.tsx' },
+            { path: '/projects', label: 'page.tsx' },
             { path: '/contact', label: 'page.tsx' },
             { path: '/game', label: 'page.tsx' }
           ].map((item, index) => (

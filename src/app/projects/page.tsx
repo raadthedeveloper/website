@@ -2,7 +2,7 @@
 
 import PageLayout from '../../components/PageLayout';
 
-export default function Work() {
+export default function Projects() {
   const projects = [
     {
       title: 'housedrift',
@@ -60,7 +60,7 @@ export default function Work() {
   ];
 
   return (
-    <PageLayout filePath="src/app/work/page.tsx">
+    <PageLayout filePath="src/app/projects/page.tsx">
       <div className="text-[#cccccc]">
         <div className="space-y-16">
           {/* Projects Section */}
