@@ -11,7 +11,7 @@ export default function Home() {
         <div className="flex-1">
           <div className="mb-6 sm:mb-8">
             <h1 className="text-5xl font-bold mb-4 sm:mb-6 text-[#C678DD]">
-              hello world, i'm raad
+              raad fakhrian
             </h1>
             <div className="bg-[#252526] p-4 sm:p-6 rounded-lg border border-[#3e3e42]">
               <p className="text-[#cccccc]">
