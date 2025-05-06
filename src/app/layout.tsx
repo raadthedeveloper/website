@@ -42,9 +42,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} h-screen overflow-hidden`}>
+    <html lang="en" className="h-full">
+      <body className={`${inter.className} h-full overflow-hidden`}>
         <div className="flex flex-col h-full bg-[#1e1e1e] text-[#cccccc] scaled-fill overflow-hidden">
+          <div className="h-[env(safe-area-inset-top)]" />
           <Navigation />
           <div className="flex flex-1 h-full overflow-hidden">
             <div className="flex flex-col flex-1 h-full">

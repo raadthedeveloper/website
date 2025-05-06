@@ -9,7 +9,6 @@
   --foreground: #171717;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --safe-area-inset-top: env(safe-area-inset-top, 0px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +23,7 @@ html, body {
   zoom: 1 !important;
   transform: none !important;
   box-sizing: border-box;
+  height: 100%;
 }
 
 body {
@@ -47,18 +47,12 @@ body {
   transform-origin: top left;
 }
 
-@layer utilities {
-  .mobile-safe-top {
-    padding-top: var(--safe-area-inset-top);
-  }
-}
-
 @media (max-width: 768px) {
-  body {
-    min-height: 100dvh;
+  html {
+    height: -webkit-fill-available;
   }
   
-  .mobile-safe-top {
-    padding-top: calc(env(safe-area-inset-top) + 1rem);
+  body {
+    min-height: -webkit-fill-available;
   }
 }
