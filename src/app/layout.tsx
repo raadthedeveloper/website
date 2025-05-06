@@ -25,12 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col h-screen bg-[#1e1e1e] text-[#cccccc]">
+        <div className="flex flex-col h-full bg-[#1e1e1e] text-[#cccccc] scaled-fill overflow-auto">
           <Navigation />
-          <div className="flex flex-1 overflow-hidden">
-            <div className="flex flex-col flex-1">
-              <main className="flex-1 overflow-auto">
-        {children}
+          <div className="flex flex-1 h-full overflow-hidden">
+            <div className="flex flex-col flex-1 h-full">
+              <main className="flex-1 h-full overflow-auto">
+                {children}
               </main>
             </div>
           </div>

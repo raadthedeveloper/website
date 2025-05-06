@@ -26,9 +26,22 @@ html, body {
 }
 
 body {
-  background: var(--background);
+  background: #1e1e1e;
   color: var(--foreground);
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 /* DEBUG: If this comment appears in production, CSS is loading */
+
+/* Add scale-90 utility if not present in Tailwind */
+.scale-90 {
+  transform: scale(0.9);
+  transform-origin: top left;
+}
+
+.scaled-fill {
+  width: calc(100vw / 0.7);
+  height: calc(100vh / 0.7);
+  transform: scale(0.7);
+  transform-origin: top left;
+}

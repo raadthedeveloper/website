@@ -126,7 +126,7 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
         </div>
 
         {/* Main content area with fixed left margin for explorer */}
-        <div className="flex-1 sm:ml-64 overflow-auto">
+        <div className="flex-1 sm:ml-64 overflow-auto h-full">
           {/* File path breadcrumb bar - horizontal, above content, desktop only */}
           <div className="hidden sm:flex items-center gap-2 px-6 pt-4 pb-2 text-[#cccccc] text-sm whitespace-nowrap">
             {pathSegments.map((segment, index) => (
@@ -158,7 +158,7 @@ export default function PageLayout({ children, filePath }: PageLayoutProps) {
       </div>
 
       {/* Terminal */}
-      <div className="hidden sm:block fixed bottom-0 left-64 right-0 h-64 bg-[#1e1e1e] border-t border-[#3e3e42]">
+      <div className="hidden sm:block fixed bottom-0 left-64 right-0 h-64 bg-[#1e1e1e] border-t border-[#3e3e42] z-50">
         {/* Terminal Top Bar */}
         <div className="flex items-center border-b border-[#3e3e42] bg-[#252526] text-[#cccccc] text-xs">
           <div className="flex items-center">
