@@ -9,6 +9,7 @@
   --foreground: #171717;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --safe-area-inset-top: env(safe-area-inset-top, 0px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,4 +45,20 @@ body {
   height: calc(100vh / 0.7);
   transform: scale(0.7);
   transform-origin: top left;
+}
+
+@layer utilities {
+  .mobile-safe-top {
+    padding-top: var(--safe-area-inset-top);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    min-height: 100dvh;
+  }
+  
+  .mobile-safe-top {
+    padding-top: calc(env(safe-area-inset-top) + 1rem);
+  }
 }

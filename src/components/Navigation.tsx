@@ -17,7 +17,7 @@ export default function Navigation() {
       </div>
 
       {/* Tab Bar */}
-      <div className="h-10 bg-[#252526] flex items-center border-b border-[#3e3e42]">
+      <div className="h-10 bg-[#252526] flex items-center border-b border-[#3e3e42] mobile-safe-top">
         {/* Side Icons with Dropdown - hidden on mobile */}
         <div className="hidden sm:flex h-full border-r border-[#3e3e42] items-center pr-1">
           <div className="flex items-center">

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     apple: '/favicon.ico',
   },
-  viewport: 'width=device-width, initial-scale=1',
+  viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
   themeColor: '#1e1e1e',
   openGraph: {
     title: 'raad fakhrian',
