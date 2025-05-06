@@ -114,17 +114,17 @@ export default function Home() {
         </div>
 
         <div className="block lg:hidden mt-2 sm:mt-8 w-full">
-          <div className="w-full h-[340px] sm:h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
+          <div className="w-full h-[340px] sm:h-[500px] rounded-lg overflow-hidden border border-[#3e3e42]">
             <img 
-              src="/uhhpicofme3.jpg" 
+              src="/uhhpicofme5.jpg" 
               alt="Raad Fakhrian" 
               className="w-full h-full object-cover"
             />
           </div>
         </div>
-        <div className="hidden lg:block w-[800px] h-[832px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="hidden lg:block w-[800px] h-[836px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
-            src="/uhhpicofme3.jpg" 
+            src="/uhhpicofme5.jpg" 
             alt="Raad Fakhrian" 
             className="w-full h-full object-cover"
           />

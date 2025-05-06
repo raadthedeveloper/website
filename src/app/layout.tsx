@@ -24,8 +24,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex flex-col h-full bg-[#1e1e1e] text-[#cccccc] scaled-fill overflow-auto">
+      <body className={`${inter.className} h-screen overflow-hidden`}>
+        <div className="flex flex-col h-full bg-[#1e1e1e] text-[#cccccc] scaled-fill overflow-hidden">
           <Navigation />
           <div className="flex flex-1 h-full overflow-hidden">
             <div className="flex flex-col flex-1 h-full">

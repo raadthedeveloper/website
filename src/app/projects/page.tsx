@@ -99,7 +99,7 @@ export default function Projects() {
 
         {/* On mobile, image is below text and full width; on desktop, side-by-side */}
         <div className="block lg:hidden mt-2 sm:mt-8 w-full">
-          <div className="w-full h-[340px] sm:h-[300px] rounded-lg overflow-hidden border border-[#3e3e42]">
+          <div className="w-full h-[340px] sm:h-[500px] rounded-lg overflow-hidden border border-[#3e3e42]">
             <img 
               src="/uhhpicofme6.jpg" 
               alt="Raad Fakhrian" 
@@ -107,7 +107,7 @@ export default function Projects() {
             />
           </div>
         </div>
-        <div className="hidden lg:block w-[800px] h-[908px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
+        <div className="hidden lg:block w-[800px] h-[865px] rounded-lg overflow-hidden border border-[#3e3e42] flex-shrink-0 sticky top-8">
           <img 
             src="/uhhpicofme6.jpg" 
             alt="Raad Fakhrian" 
