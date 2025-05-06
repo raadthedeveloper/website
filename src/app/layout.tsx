@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
+import ClientLayout from "@/app/ClientLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,18 +43,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} h-full overflow-hidden`}>
-        <div className="flex flex-col h-full bg-[#1e1e1e] text-[#cccccc] scaled-fill overflow-hidden">
-          <div className="h-[env(safe-area-inset-top)]" />
-          <Navigation />
-          <div className="flex flex-1 h-full overflow-hidden">
-            <div className="flex flex-col flex-1 h-full">
-              <main className="flex-1 h-full overflow-auto">
-                {children}
-              </main>
-            </div>
-          </div>
-        </div>
+      <body className={inter.className}>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

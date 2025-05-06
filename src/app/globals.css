@@ -9,6 +9,7 @@
   --foreground: #171717;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --vh: 1vh;
 }
 
 @media (prefers-color-scheme: dark) {
