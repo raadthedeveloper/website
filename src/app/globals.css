@@ -49,11 +49,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  html {
-    height: -webkit-fill-available;
-  }
-  
-  body {
-    min-height: -webkit-fill-available;
+  .scaled-fill {
+    width: calc(calc(var(--vh, 1vh) * 100) / 0.7);
+    height: calc(calc(var(--vh, 1vh) * 100) / 0.7);
   }
 }
