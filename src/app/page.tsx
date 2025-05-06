@@ -42,7 +42,7 @@ export default function Home() {
                   <li>Chess</li>
                   <li>Painting</li>
                   <li>Reading</li>
-                  <li>Traveling</li>
+                  <li>Architecture</li>
                 </ul>
               </div>
             </div>
