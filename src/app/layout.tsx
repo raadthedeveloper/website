@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Raad Fakhrian",
+  title: "raad fakhrian",
   description: "raad's website",
   icons: {
     icon: '/favicon.ico',
