@@ -30,6 +30,7 @@ export default function GamePage() {
   const [localHighScore, setLocalHighScore] = useState(0);
   const [beatRaadScore, setBeatRaadScore] = useState(false);
   const [cellSize, setCellSize] = useState(DESKTOP_CELL_SIZE);
+  const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
 
   // Calculate cell size based on screen width
   useEffect(() => {
@@ -186,6 +187,56 @@ export default function GamePage() {
     };
   }, []);
 
+  // Handle touch events for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (!gameStarted) {
+      resetGame();
+      return;
+    }
+    setTouchStart({
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY
+    });
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!touchStart || !gameStarted) return;
+
+    const touchEnd = {
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY
+    };
+
+    const dx = touchEnd.x - touchStart.x;
+    const dy = touchEnd.y - touchStart.y;
+
+    // Require minimum swipe distance
+    if (Math.abs(dx) < 30 && Math.abs(dy) < 30) return;
+
+    // Determine swipe direction
+    if (Math.abs(dx) > Math.abs(dy)) {
+      // Horizontal swipe
+      if (dx > 0 && direction !== 'LEFT') {
+        setDirection('RIGHT');
+      } else if (dx < 0 && direction !== 'RIGHT') {
+        setDirection('LEFT');
+      }
+    } else {
+      // Vertical swipe
+      if (dy > 0 && direction !== 'UP') {
+        setDirection('DOWN');
+      } else if (dy < 0 && direction !== 'DOWN') {
+        setDirection('UP');
+      }
+    }
+
+    setTouchStart(null);
+  };
+
+  const handleTouchEnd = () => {
+    setTouchStart(null);
+  };
+
   return (
     <PageLayout filePath="src/app/game/page.tsx">
       <div className="flex flex-col items-center justify-center h-[calc(100vh-4rem)] w-full overflow-hidden">
@@ -201,9 +252,9 @@ export default function GamePage() {
           </div>
 
           {/* Game Board with Score Displays */}
-          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 my-2">
             {/* Score Display - Hidden on mobile, shown on desktop */}
-            <div className="hidden md:block text-[#cccccc] text-8xl font-bold bg-[#252526] px-8 py-4 rounded-lg shadow-lg">
+            <div className="hidden md:block text-[#cccccc] text-8xl font-bold bg-[#252526] px-8 py-4 rounded-lg shadow-lg min-w-[120px] text-center">
               {score}
             </div>
 
@@ -214,8 +265,11 @@ export default function GamePage() {
                 width: GRID_SIZE * cellSize,
                 height: GRID_SIZE * cellSize,
                 maxWidth: 'calc(100vw - 32px)',
-                maxHeight: 'calc(100vh - 180px)'
+                maxHeight: 'calc(100vh - 160px)'
               }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               {/* Grid Background */}
               <div className="absolute inset-0 grid grid-cols-20 grid-rows-20">
@@ -258,12 +312,12 @@ export default function GamePage() {
             </div>
 
             {/* Score Display - Hidden on mobile, shown on desktop */}
-            <div className="hidden md:block text-[#cccccc] text-8xl font-bold bg-[#252526] px-8 py-4 rounded-lg shadow-lg">
+            <div className="hidden md:block text-[#cccccc] text-8xl font-bold bg-[#252526] px-8 py-4 rounded-lg shadow-lg min-w-[120px] text-center">
               {score}
             </div>
 
             {/* Mobile Score Display - Shown only on mobile */}
-            <div className="md:hidden text-[#cccccc] text-5xl font-bold bg-[#252526] px-6 py-3 rounded-lg shadow-lg">
+            <div className="md:hidden text-[#cccccc] text-5xl font-bold bg-[#252526] px-6 py-3 rounded-lg shadow-lg min-w-[100px] text-center">
               {score}
             </div>
           </div>
