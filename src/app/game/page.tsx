@@ -260,13 +260,14 @@ export default function GamePage() {
 
             {/* Game Board */}
             <div 
-              className="relative bg-black border-4 border-[#3e3e42] rounded-lg shadow-lg"
+              className="relative bg-black border-4 border-[#3e3e42] rounded-lg shadow-lg cursor-pointer"
               style={{
                 width: GRID_SIZE * cellSize,
                 height: GRID_SIZE * cellSize,
                 maxWidth: 'calc(100vw - 32px)',
                 maxHeight: 'calc(100vh - 160px)'
               }}
+              onClick={() => !gameStarted && resetGame()}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
@@ -309,6 +310,27 @@ export default function GamePage() {
                   top: `${food.y * cellSize + 1}px`,
                 }}
               />
+
+              {/* Start Screen */}
+              {!gameStarted && !gameOver && (
+                <div className="absolute inset-0 bg-[#1e1e1e]/90 flex flex-col items-center justify-center">
+                  <h2 className="text-2xl font-semibold text-[#C678DD] mb-4">Snake Game</h2>
+                  <p className="text-[#cccccc] mb-4">
+                    {typeof window !== 'undefined' && window.innerWidth < 768 ? (
+                      'tap to start'
+                    ) : (
+                      'press space to start'
+                    )}
+                  </p>
+                  <p className="text-[#cccccc] text-sm">
+                    {typeof window !== 'undefined' && window.innerWidth < 768 ? (
+                      'swipe to control the snake'
+                    ) : (
+                      'use arrow keys to control the snake'
+                    )}
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Score Display - Hidden on mobile, shown on desktop */}
@@ -343,27 +365,6 @@ export default function GamePage() {
               >
                 try again
               </button>
-            </div>
-          )}
-
-          {/* Start Screen */}
-          {!gameStarted && !gameOver && (
-            <div className="absolute inset-0 bg-[#1e1e1e]/90 flex flex-col items-center justify-center">
-              <h2 className="text-2xl font-semibold text-[#C678DD] mb-4">Snake Game</h2>
-              <p className="text-[#cccccc] mb-4">
-                {typeof window !== 'undefined' && window.innerWidth < 768 ? (
-                  'tap to start'
-                ) : (
-                  'press space to start'
-                )}
-              </p>
-              <p className="text-[#cccccc] text-sm">
-                {typeof window !== 'undefined' && window.innerWidth < 768 ? (
-                  'swipe to control the snake'
-                ) : (
-                  'use arrow keys to control the snake'
-                )}
-              </p>
             </div>
           )}
         </div>
