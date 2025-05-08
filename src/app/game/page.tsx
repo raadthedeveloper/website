@@ -11,7 +11,7 @@ type Position = {
 type Direction = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
 
 const GRID_SIZE = 20; // Fixed grid size
-const CELL_SIZE = 30; // Size of each cell in pixels
+const DESKTOP_CELL_SIZE = 30; // Size of each cell in pixels on desktop
 const HIGH_SCORE = 122; // Raad's high score
 
 export default function GamePage() {
@@ -28,6 +28,26 @@ export default function GamePage() {
   const [score, setScore] = useState(0);
   const [gameStarted, setGameStarted] = useState(false);
   const [localHighScore, setLocalHighScore] = useState(0);
+  const [beatRaadScore, setBeatRaadScore] = useState(false);
+  const [cellSize, setCellSize] = useState(DESKTOP_CELL_SIZE);
+
+  // Calculate cell size based on screen width
+  useEffect(() => {
+    const updateCellSize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 768) { // mobile
+        const maxWidth = screenWidth - 32; // 16px padding on each side
+        const calculatedSize = Math.floor(maxWidth / GRID_SIZE);
+        setCellSize(calculatedSize);
+      } else {
+        setCellSize(DESKTOP_CELL_SIZE);
+      }
+    };
+
+    updateCellSize();
+    window.addEventListener('resize', updateCellSize);
+    return () => window.removeEventListener('resize', updateCellSize);
+  }, []);
 
   // Load local high score from localStorage on component mount
   useEffect(() => {
@@ -39,9 +59,14 @@ export default function GamePage() {
 
   // Update local high score when game ends
   useEffect(() => {
-    if (gameOver && score > localHighScore) {
-      setLocalHighScore(score);
-      localStorage.setItem('snakeHighScore', score.toString());
+    if (gameOver) {
+      if (score > localHighScore) {
+        setLocalHighScore(score);
+        localStorage.setItem('snakeHighScore', score.toString());
+      }
+      if (score > HIGH_SCORE) {
+        setBeatRaadScore(true);
+      }
     }
   }, [gameOver, score, localHighScore]);
 
@@ -64,6 +89,7 @@ export default function GamePage() {
     setGameOver(false);
     setScore(0);
     setGameStarted(true);
+    setBeatRaadScore(false);
   };
 
   const moveSnake = useCallback(() => {
@@ -103,9 +129,11 @@ export default function GamePage() {
       newSnake.unshift(head);
 
       // Check if food is eaten
-      if (head.x === food.x && head.y === food.y) {
+      const ateFood = head.x === food.x && head.y === food.y;
+      if (ateFood) {
         setFood(generateFood());
-        setScore(prev => prev + 1);
+        // Move score update outside of setSnake to prevent double updates
+        setTimeout(() => setScore(prev => prev + 1), 0);
       } else {
         newSnake.pop();
       }
@@ -150,84 +178,116 @@ export default function GamePage() {
     return () => clearInterval(gameLoop);
   }, [moveSnake, gameStarted, gameOver]);
 
+  useEffect(() => {
+    // Prevent scrolling on the game page
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   return (
     <PageLayout filePath="src/app/game/page.tsx">
-      <div className="flex flex-col items-center justify-center h-full w-full overflow-hidden">
-        <div className="relative flex flex-col items-center gap-4">
-          {/* Score Display */}
-          <div className="flex gap-8 text-[#cccccc] text-xl">
-            <div className="bg-[#252526] px-6 py-3 rounded shadow-lg">
-              Current Score: {score}
+      <div className="flex flex-col items-center justify-center h-[calc(100vh-4rem)] w-full overflow-hidden">
+        <div className="relative flex flex-col items-center justify-center h-full w-full">
+          {/* High Scores Display */}
+          <div className="flex gap-4 md:gap-8 text-[#cccccc] text-lg md:text-xl mb-2">
+            <div className="bg-[#252526] px-4 md:px-6 py-2 md:py-3 rounded shadow-lg">
+              your high score: {localHighScore}
             </div>
-            <div className="bg-[#252526] px-6 py-3 rounded shadow-lg">
-              Your High Score: {localHighScore}
-            </div>
-            <div className="bg-[#252526] px-6 py-3 rounded shadow-lg">
-              Raad's High Score: {HIGH_SCORE}
+            <div className="bg-[#252526] px-4 md:px-6 py-2 md:py-3 rounded shadow-lg">
+              raad's high score: {HIGH_SCORE}
             </div>
           </div>
 
-          {/* Game Board */}
-          <div 
-            className="relative bg-black border-4 border-[#3e3e42] rounded-lg shadow-lg"
-            style={{
-              width: GRID_SIZE * CELL_SIZE,
-              height: GRID_SIZE * CELL_SIZE
-            }}
-          >
-            {/* Grid Background */}
-            <div className="absolute inset-0 grid grid-cols-20 grid-rows-20">
-              {Array.from({ length: GRID_SIZE * GRID_SIZE }).map((_, i) => (
+          {/* Game Board with Score Displays */}
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            {/* Score Display - Hidden on mobile, shown on desktop */}
+            <div className="hidden md:block text-[#cccccc] text-8xl font-bold bg-[#252526] px-8 py-4 rounded-lg shadow-lg">
+              {score}
+            </div>
+
+            {/* Game Board */}
+            <div 
+              className="relative bg-black border-4 border-[#3e3e42] rounded-lg shadow-lg"
+              style={{
+                width: GRID_SIZE * cellSize,
+                height: GRID_SIZE * cellSize,
+                maxWidth: 'calc(100vw - 32px)',
+                maxHeight: 'calc(100vh - 180px)'
+              }}
+            >
+              {/* Grid Background */}
+              <div className="absolute inset-0 grid grid-cols-20 grid-rows-20">
+                {Array.from({ length: GRID_SIZE * GRID_SIZE }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="border border-[#1e1e1e]/30"
+                    style={{
+                      width: cellSize,
+                      height: cellSize
+                    }}
+                  />
+                ))}
+              </div>
+              
+              {/* Snake */}
+              {snake.map((segment, index) => (
                 <div
-                  key={i}
-                  className="border border-[#1e1e1e]/30"
+                  key={index}
+                  className="absolute bg-[#264f78] rounded-md shadow-md"
                   style={{
-                    width: CELL_SIZE,
-                    height: CELL_SIZE
+                    width: cellSize - 2,
+                    height: cellSize - 2,
+                    left: `${segment.x * cellSize + 1}px`,
+                    top: `${segment.y * cellSize + 1}px`,
                   }}
                 />
               ))}
-            </div>
-            
-            {/* Snake */}
-            {snake.map((segment, index) => (
+              
+              {/* Food */}
               <div
-                key={index}
-                className="absolute bg-[#264f78] rounded-md shadow-md"
+                className="absolute bg-[#E06C75] rounded-full shadow-lg"
                 style={{
-                  width: CELL_SIZE - 2,
-                  height: CELL_SIZE - 2,
-                  left: `${segment.x * CELL_SIZE + 1}px`,
-                  top: `${segment.y * CELL_SIZE + 1}px`,
+                  width: cellSize - 2,
+                  height: cellSize - 2,
+                  left: `${food.x * cellSize + 1}px`,
+                  top: `${food.y * cellSize + 1}px`,
                 }}
               />
-            ))}
-            
-            {/* Food */}
-            <div
-              className="absolute bg-[#E06C75] rounded-full shadow-lg"
-              style={{
-                width: CELL_SIZE - 2,
-                height: CELL_SIZE - 2,
-                left: `${food.x * CELL_SIZE + 1}px`,
-                top: `${food.y * CELL_SIZE + 1}px`,
-              }}
-            />
+            </div>
+
+            {/* Score Display - Hidden on mobile, shown on desktop */}
+            <div className="hidden md:block text-[#cccccc] text-8xl font-bold bg-[#252526] px-8 py-4 rounded-lg shadow-lg">
+              {score}
+            </div>
+
+            {/* Mobile Score Display - Shown only on mobile */}
+            <div className="md:hidden text-[#cccccc] text-5xl font-bold bg-[#252526] px-6 py-3 rounded-lg shadow-lg">
+              {score}
+            </div>
           </div>
 
           {/* Game Over Overlay */}
           {gameOver && (
             <div className="absolute inset-0 bg-[#1e1e1e]/90 flex flex-col items-center justify-center">
-              <h2 className="text-2xl font-semibold text-[#E06C75] mb-4">Game Over!</h2>
-              <p className="text-[#cccccc] mb-4">Score: {score}</p>
+              <h2 className="text-2xl font-semibold text-[#E06C75] mb-4">fin</h2>
+              <p className="text-[#cccccc] mb-4">score: {score}</p>
               {score > localHighScore && (
-                <p className="text-[#98C379] mb-4">New High Score! 🎉</p>
+                <p className="text-[#98C379] mb-4">personal highscore</p>
+              )}
+              {score > HIGH_SCORE && (
+                <div className="text-center mb-4">
+                  <p className="text-[#C678DD] text-lg mb-2">congrats...</p>
+                  <p className="text-[#cccccc] mb-1">you've beaten my record</p>
+                  <p className="text-[#cccccc] text-sm">send me a screenshot for proof.. there's no mongo on this server lol</p>
+                </div>
               )}
               <button
                 onClick={resetGame}
                 className="bg-[#264f78] text-[#cccccc] px-6 py-2 rounded hover:bg-[#365373] transition-colors"
               >
-                Play Again
+                try again
               </button>
             </div>
           )}
