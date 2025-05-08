@@ -12,7 +12,7 @@ type Direction = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
 
 const GRID_SIZE = 20; // Fixed grid size
 const DESKTOP_CELL_SIZE = 30; // Size of each cell in pixels on desktop
-const HIGH_SCORE = 61; // Raad's high score
+const HIGH_SCORE = 68; // Raad's high score
 
 export default function GamePage() {
   // Initialize snake with 4 segments in the center
