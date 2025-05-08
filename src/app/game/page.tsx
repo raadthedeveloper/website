@@ -145,10 +145,8 @@ export default function GamePage() {
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
-      if (!gameStarted) {
-        if (e.code === 'Space') {
-          resetGame();
-        }
+      if (!gameStarted || gameOver) {
+        resetGame();
         return;
       }
 
@@ -170,7 +168,7 @@ export default function GamePage() {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [direction, gameStarted]);
+  }, [direction, gameStarted, gameOver]);
 
   useEffect(() => {
     if (!gameStarted || gameOver) return;
@@ -239,10 +237,16 @@ export default function GamePage() {
 
   return (
     <PageLayout filePath="src/app/game/page.tsx">
-      <div className="flex flex-col items-center justify-center h-[calc(100vh-4rem)] w-full overflow-hidden">
-        <div className="relative flex flex-col items-center justify-center h-full w-full">
+      <div 
+        className="flex flex-col items-center justify-center h-[calc(100vh-4rem)] w-full overflow-hidden"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onClick={() => !gameStarted && typeof window !== 'undefined' && window.innerWidth < 768 && resetGame()}
+      >
+        <div className="relative flex flex-col items-center justify-center w-full h-full">
           {/* High Scores Display */}
-          <div className="flex gap-4 md:gap-8 text-[#cccccc] text-lg md:text-xl mb-2">
+          <div className="flex gap-4 md:gap-8 text-[#cccccc] text-lg md:text-xl">
             <div className="bg-[#252526] px-4 md:px-6 py-2 md:py-3 rounded shadow-lg">
               your high score: {localHighScore}
             </div>
@@ -268,9 +272,6 @@ export default function GamePage() {
                 maxHeight: 'calc(100vh - 160px)'
               }}
               onClick={() => !gameStarted && resetGame()}
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
             >
               {/* Grid Background */}
               <div className="absolute inset-0 grid grid-cols-20 grid-rows-20">
@@ -319,7 +320,7 @@ export default function GamePage() {
                     {typeof window !== 'undefined' && window.innerWidth < 768 ? (
                       'tap to start'
                     ) : (
-                      'press space to start'
+                      'press any key to start'
                     )}
                   </p>
                   <p className="text-[#cccccc] text-sm">
@@ -327,6 +328,34 @@ export default function GamePage() {
                       'swipe to control the snake'
                     ) : (
                       'use arrow keys to control the snake'
+                    )}
+                  </p>
+                </div>
+              )}
+
+              {/* Game Over Overlay */}
+              {gameOver && (
+                <div 
+                  className="absolute inset-0 bg-[#1e1e1e]/90 flex flex-col items-center justify-center cursor-pointer"
+                  onClick={resetGame}
+                >
+                  <h2 className="text-2xl font-semibold text-[#E06C75] mb-4">fin</h2>
+                  <p className="text-[#cccccc] mb-4">score: {score}</p>
+                  {score > localHighScore && (
+                    <p className="text-[#98C379] mb-4">personal highscore</p>
+                  )}
+                  {score > HIGH_SCORE && (
+                    <div className="text-center mb-4">
+                      <p className="text-[#C678DD] text-lg mb-2">congrats...</p>
+                      <p className="text-[#cccccc] mb-1">you've beaten my record</p>
+                      <p className="text-[#cccccc] text-sm">send me a screenshot for proof.. there's no mongo on this server lol</p>
+                    </div>
+                  )}
+                  <p className="text-[#cccccc] text-sm">
+                    {typeof window !== 'undefined' && window.innerWidth < 768 ? (
+                      'tap to play again'
+                    ) : (
+                      'press any key to play again'
                     )}
                   </p>
                 </div>
@@ -343,30 +372,6 @@ export default function GamePage() {
               {score}
             </div>
           </div>
-
-          {/* Game Over Overlay */}
-          {gameOver && (
-            <div className="absolute inset-0 bg-[#1e1e1e]/90 flex flex-col items-center justify-center">
-              <h2 className="text-2xl font-semibold text-[#E06C75] mb-4">fin</h2>
-              <p className="text-[#cccccc] mb-4">score: {score}</p>
-              {score > localHighScore && (
-                <p className="text-[#98C379] mb-4">personal highscore</p>
-              )}
-              {score > HIGH_SCORE && (
-                <div className="text-center mb-4">
-                  <p className="text-[#C678DD] text-lg mb-2">congrats...</p>
-                  <p className="text-[#cccccc] mb-1">you've beaten my record</p>
-                  <p className="text-[#cccccc] text-sm">send me a screenshot for proof.. there's no mongo on this server lol</p>
-                </div>
-              )}
-              <button
-                onClick={resetGame}
-                className="bg-[#264f78] text-[#cccccc] px-6 py-2 rounded hover:bg-[#365373] transition-colors"
-              >
-                try again
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </PageLayout>
