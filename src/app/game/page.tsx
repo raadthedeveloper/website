@@ -350,8 +350,20 @@ export default function GamePage() {
           {!gameStarted && !gameOver && (
             <div className="absolute inset-0 bg-[#1e1e1e]/90 flex flex-col items-center justify-center">
               <h2 className="text-2xl font-semibold text-[#C678DD] mb-4">Snake Game</h2>
-              <p className="text-[#cccccc] mb-4">Press Space to Start</p>
-              <p className="text-[#cccccc] text-sm">Use arrow keys to control the snake</p>
+              <p className="text-[#cccccc] mb-4">
+                {typeof window !== 'undefined' && window.innerWidth < 768 ? (
+                  'tap to start'
+                ) : (
+                  'press space to start'
+                )}
+              </p>
+              <p className="text-[#cccccc] text-sm">
+                {typeof window !== 'undefined' && window.innerWidth < 768 ? (
+                  'swipe to control the snake'
+                ) : (
+                  'use arrow keys to control the snake'
+                )}
+              </p>
             </div>
           )}
         </div>
