@@ -42,7 +42,7 @@ const HANGMAN_ART = [
 ];
 
 function getRandomWord() {
-  return WORDS[Math.floor(Math.random() * WORDS.length)];
+  return WORDS[0]; // Start with a fixed word to avoid hydration mismatch
 }
 
 function HangmanGame() {
@@ -53,6 +53,14 @@ function HangmanGame() {
   const maxWrong = 6;
   const word = entry.word.toUpperCase();
   const hint = entry.hint;
+
+  useEffect(() => {
+    // Only get a random word after initial render
+    if (guessed.length === 0 && wrong.length === 0) {
+      const randomWord = WORDS[Math.floor(Math.random() * WORDS.length)];
+      setEntry(randomWord);
+    }
+  }, []);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -150,7 +158,7 @@ function HangmanGame() {
 export default function NotFound() {
   return (
     <PageLayout filePath="src/app/not-found.tsx">
-      <div className="flex flex-col items-center justify-center h-[70vh]">
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] py-8">
         <div className="bg-[#232323] border border-[#3e3e42] rounded-lg p-6 mb-8 max-w-xl text-[#cccccc] text-center text-base">
           Hi 👋 My Name Is Raad 🗿🤘<br />
           Locked in 💻 Caffeine-coded ☕<br />

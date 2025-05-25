@@ -5,20 +5,26 @@ import PageLayout from '../../components/PageLayout';
 export default function Projects() {
   const projects = [
     {
-      title: 'housedrift',
+      title: 'Actuarial Data Pipeline Acceleration',
+      description: ["In progress engineering optimized C++ DLL components to accelerate data pipelines within actuarial modeling environments. This work focuses on optimizing ETL workflows and enhancing data integration throughput to support large-scale actuarial analytics with improved execution speed, scalability, and native system interoperability."],
+      technologies: ['C++', 'DLL', 'ETL', 'Data Integration', 'Moody\'s AXIS'],
+      link: 'https://github.com/raadthedeveloper'
+    },
+    {
+      title: 'Modeling Platform - Compatible Rate DLL',
+      description: ["A high-performance C++ DLL designed for actuarial modeling platforms, specifically compatible with external DLL workflows. This project demonstrates how custom logic can be embedded in external libraries for use in actuarial modeling platforms that support DLL integration."],
+      technologies: ['C++', 'DLL', 'Visual Studio', 'Moody\'s AXIS'],
+      link: 'https://github.com/raadthedeveloper/ModelingPlatform-CompatibleRateDLL'
+    },
+    {
+      title: 'HouseDrift',
       description: ["A private web-based platform designed for intelligent management and tracking of residential property transactions. Leverages machine learning algorithms to forecast home valuations and project future homeowner cash flows, enabling data-driven decision-making in real estate. Currently under private development in a secured repository."],
-      technologies: ['Next.js', 'Node.js', 'PostgreSQL', "React"],
+      technologies: ['Next.js', 'Node.js', 'PostgreSQL', "Mongodb", "React", "Python", "Scikit-learn"],
       link: 'https://github.com/raadthedeveloper'
     },
     {
-      title: 'planner',
+      title: 'Planner',
       description: 'An AI-powered event planning platform engineered to autonomously manage and optimize end-to-end event logistics. Integrates intelligent scheduling, resource allocation, and personalized recommendations to streamline the planning process. Currently in private development with a secured codebase.',
-      technologies: ['React', 'Next.js', 'Node.js', 'Stripe','React'],
-      link: 'https://github.com/raadthedeveloper'
-    },
-    {
-      title: 'Addy Canada',
-      description: 'A location-based web platform that enabled users to discover local events and seamlessly purchase tickets, food, and beverages within a unified interface. Designed with integrated payment processing and geospatial event filtering. The project was dissolved in 2019.',
       technologies: ['React', 'Next.js', 'Node.js', 'Stripe','React'],
       link: 'https://github.com/raadthedeveloper'
     }
