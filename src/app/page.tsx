@@ -73,7 +73,7 @@ export default function Home() {
                 <div>
                   <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">ML/AI</h3>
                   <ul className="text-[#cccccc] space-y-1">
-                    <li>TensorFlow</li>
+                    <li>Python</li>
                     <li>PyTorch</li>
                     <li>Scikit-learn</li>
                     <li>R</li>

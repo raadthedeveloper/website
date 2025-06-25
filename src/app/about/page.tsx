@@ -17,7 +17,7 @@ export default function About() {
                     <h3 className="text-xl font-bold text-[#E06C75]">Associate Actuary</h3>
                     <p className="text-[#61AFEF]">PartnerRe</p>
                   </div>
-                  <span className="text-[#858585]">2024 - Present</span>
+                  <span className="text-[#858585]">2024 - 2025</span>
                 </div>
                 <p className="text-[#cccccc] mb-4">Apart of the modelling team, creating solutions for diverse problems.</p>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">

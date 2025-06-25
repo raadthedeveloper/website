@@ -5,20 +5,26 @@ import PageLayout from '../../components/PageLayout';
 export default function Projects() {
   const projects = [
     {
+      title: 'OFSI Data Dashboard',
+      description: ["A comprehensive data visualization platform that automates the collection and analysis of OSFI financial reports from Canadian insurers and reinsurers. Engineered using Selenium to scrape regulatory financial data, enabling comparative analysis of capital positioning across the insurance industry. The dashboard provides insights into capital adequacy ratios, solvency metrics, and relative financial health positioning among market participants."],
+      technologies: ['Python', 'Selenium', 'ETL'],
+      link: 'https://github.com/raadthedeveloper'
+    },
+    {
       title: 'Actuarial Data Pipeline Acceleration',
       description: ["In progress engineering optimized C++ DLL components to accelerate data pipelines within actuarial modeling environments. This work focuses on optimizing ETL workflows and enhancing data integration throughput to support large-scale actuarial analytics with improved execution speed, scalability, and native system interoperability."],
-      technologies: ['C++', 'DLL', 'ETL', 'Data Integration', 'Moody\'s AXIS'],
+      technologies: ['C++', 'DLL', 'ETL', 'Moody\'s AXIS'],
       link: 'https://github.com/raadthedeveloper'
     },
     {
       title: 'Modeling Platform - Compatible Rate DLL',
       description: ["A high-performance C++ DLL designed for actuarial modeling platforms, specifically compatible with external DLL workflows. This project demonstrates how custom logic can be embedded in external libraries for use in actuarial modeling platforms that support DLL integration."],
-      technologies: ['C++', 'DLL', 'Visual Studio', 'Moody\'s AXIS'],
+      technologies: ['C++', 'DLL', 'Moody\'s AXIS'],
       link: 'https://github.com/raadthedeveloper/ModelingPlatform-CompatibleRateDLL'
     },
     {
       title: 'HouseDrift',
-      description: ["A private web-based platform designed for intelligent management and tracking of residential property transactions. Leverages machine learning algorithms to forecast home valuations and project future homeowner cash flows, enabling data-driven decision-making in real estate. Currently under private development in a secured repository."],
+      description: ["A private web-based platform designed for intelligent management and tracking of residential property transactions. Engineered a comprehensive data pipeline that captures real estate data from API HTTP requests through Fiddler, processes JSON responses, and feeds structured data into a deep neural network to predict house prices. The platform leverages machine learning algorithms to forecast home valuations and project future homeowner cash flows, enabling data-driven decision-making in real estate. Currently under private development in a secured repository."],
       technologies: ['Next.js', 'Node.js', 'PostgreSQL', "Mongodb", "React", "Python", "Scikit-learn"],
       link: 'https://github.com/raadthedeveloper'
     },
@@ -27,41 +33,6 @@ export default function Projects() {
       description: 'An AI-powered event planning platform engineered to autonomously manage and optimize end-to-end event logistics. Integrates intelligent scheduling, resource allocation, and personalized recommendations to streamline the planning process. Currently in private development with a secured codebase.',
       technologies: ['React', 'Next.js', 'Node.js', 'Stripe','React'],
       link: 'https://github.com/raadthedeveloper'
-    }
-  ];
-
-  const experiences = [
-    {
-      title: "Associate Actuary",
-      company: "PartnerRe",
-      period: "2024 - Present",
-      description: "Apart of the modelling team, creating solutions for diverse problems.",
-      achievements: [
-        "Modelled new treaty cells in AXIS from pricing to production by creating AXIS scripts in DataLink, batches, and rules tables",
-        "Took initiative by engineering .dll files using C++ in Visual Studio to explore options in making AXIS processes/batches more efficient"
-      ],
-      technologies: ["C++", "Moody's AXIS", "SQL"]
-    },
-    {
-      title: "Software Engineer",
-      company: "Synaply",
-      period: "2024 - 2024",
-      description: "Contributed as a software engineer to the development of a sales intelligence web application that leverages AI to transform qualitative insights from sales representatives into actionable data. The platform empowers sales organizations to operationalize feedback loops and optimize performance through data-driven decision-making.",
-      achievements: [
-        "www.synaply.io"
-      ],
-      technologies: ["React", "Next.js", "Express"]
-    },
-    {
-      title: "Actuarial Analyst",
-      company: "Foresters Financial",
-      period: "2022 - 2024",
-      description: "Apart of the capital management team, problem solving for capital adequacy and solvency requirements.",
-      achievements: [
-        "Enhanced team efficiency by developing a SQL stored procedure, automating the removal of unused segmentation rows and line items from data tables, streamlining our roll-up procedure and expediting results delivery",
-        "Created robust automation solutions using VBA, enabling the seamless execution of various tasks independently and achieving remarkable efficiency gains with manual process times reduced by up to 90%"
-      ],
-      technologies: ["SQL", "VBA", "Moody's AXIS"]
     }
   ];
 
