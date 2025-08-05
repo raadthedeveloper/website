@@ -15,9 +15,9 @@ export default function Home() {
             </h1>
             <div className="bg-[#252526] p-4 sm:p-6 rounded-lg border border-[#3e3e42]">
               <p className="text-[#cccccc]">
-                I'm an actuarial professional with a strong foundation in insurance analytics, complemented by my work as an independent software engineer focused on high-performance, cross-functional systems.<br /><br />
-                My expertise spans full-stack application architecture, machine learning model deployment, and the automation of actuarial and financial workflows across diverse programming environments.<br /><br />
-                I'm driven by the challenge of deconstructing complex problems and engineering elegant, data-informed solutions that integrate seamlessly across business and technology domains.
+                I'm a data scientist and former actuarial professional with a strong background in insurance analytics and technical modeling. My work bridges data exploration, statistical modeling, and the design of scalable data pipelines that support business-critical decision-making.<br /><br />
+                I bring experience across Python, SQL, and cloud-based tools, with a focus on building clean, high-performance solutions that integrate seamlessly across data, engineering, and business domains.<br /><br />
+                I'm driven by the challenge of solving real-world problems with data and turning complex systems into actionable, measurable outcomes.
               </p>
             </div>
           </div>
