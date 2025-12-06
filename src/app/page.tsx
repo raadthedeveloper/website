@@ -11,12 +11,12 @@ export default function Home() {
         <div className="flex-1">
           <div className="mb-6 sm:mb-8">
             <h1 className="text-5xl font-bold mb-4 sm:mb-6 text-[#C678DD]">
-              raad fakhrian
+              raad fakhrian, ASA
             </h1>
             <div className="bg-[#252526] p-4 sm:p-6 rounded-lg border border-[#3e3e42]">
               <p className="text-[#cccccc]">
-                I'm a data scientist and former actuarial professional with a strong background in insurance analytics and technical modeling. My work bridges data exploration, statistical modeling, and the design of scalable data pipelines that support business-critical decision-making.<br /><br />
-                I bring experience across Python, SQL, and cloud-based tools, with a focus on building clean, high-performance solutions that integrate seamlessly across data, engineering, and business domains.<br /><br />
+                I'm a data scientist and actuary, also a former actuarial professional, with a strong background in analytics and technical modeling. My work bridges data exploration, statistical modeling, and the design of scalable data pipelines that support business-critical decision-making.<br /><br />
+                I bring experience across Python, SQL, Java, C++, and cloud-based tools, with a focus on building clean, high-performance solutions that integrate seamlessly across data, engineering, and business domains.<br /><br />
                 I'm driven by the challenge of solving real-world problems with data and turning complex systems into actionable, measurable outcomes.
               </p>
             </div>
@@ -82,7 +82,7 @@ export default function Home() {
                 <div>
                   <h3 className="font-medium mb-1 sm:mb-2 text-[#E06C75]">Tools</h3>
                   <ul className="text-[#cccccc] space-y-1">
-                    <li>Moody's AXIS</li>
+                    <li>Fabric</li>
                     <li>Git</li>
                     <li>SQL</li>
                     <li>VBA</li>

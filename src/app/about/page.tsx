@@ -22,7 +22,7 @@ export default function About() {
                 </div>
                 <p className="text-[#cccccc] mb-4">Apart of the data science & engineering team.</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "SQL"].map((tech, techIndex) => (
+                  {["Python", "SQL", "Fabric", "PowerBI"].map((tech, techIndex) => (
                     <span 
                       key={techIndex}
                       className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
@@ -125,19 +125,11 @@ export default function About() {
                 <h2 className="text-2xl font-semibold mb-6 text-[#C678DD]">Professional Exams</h2>
                 <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
                   <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Society of Actuaries</h3>
-                  <p className="text-[#858585] mb-4">2022 - 2024</p>
+                  <p className="text-[#858585] mb-4">2022 - 2025</p>
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-[#cccccc]">Exam P, Exam FM</span>
-                      <span className="text-[#858585]">2022</span>
-                    </div>
-                    <div className="flex justify-between gap-x-2">
-                      <span className="text-[#cccccc]">Exam SRM, Exam PA, Exam ATPA, Exam FAM</span>
-                      <span className="text-[#858585]">2023</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-[#cccccc]">Exam ALTAM</span>
-                      <span className="text-[#858585]">2024</span>
+                      <span className="text-[#cccccc]">Associate of the Society of Actuaries</span>
+                      <span className="text-[#858585]">2025</span>
                     </div>
                   </div>
                 </div>
