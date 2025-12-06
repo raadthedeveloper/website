@@ -66,7 +66,7 @@ export default function Home() {
                   <ul className="text-[#cccccc] space-y-1">
                     <li>Node.js</li>
                     <li>Python</li>
-                    <li>PostgreSQL</li>
+                    <li>Java</li>
                     <li>C++</li>
                   </ul>
                 </div>

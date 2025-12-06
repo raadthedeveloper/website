@@ -20,7 +20,7 @@ export default function About() {
                   </div>
                   <span className="text-[#858585]">2025 - Present</span>
                 </div>
-                <p className="text-[#cccccc] mb-4">Building solutions for diverse problems.</p>
+                <p className="text-[#cccccc] mb-4">Apart of the data science & engineering team.</p>
                 <div className="flex flex-wrap gap-2">
                   {["Python", "SQL"].map((tech, techIndex) => (
                     <span 
@@ -41,7 +41,7 @@ export default function About() {
                   </div>
                   <span className="text-[#858585]">2024 - 2025</span>
                 </div>
-                <p className="text-[#cccccc] mb-4">Apart of the modelling team.</p>
+                <p className="text-[#cccccc] mb-4">Apart of actuarial team.</p>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
                   <li>Modelled new treaty cells in AXIS from pricing to production by creating AXIS scripts in DataLink, batches, and rules tables</li>
                   <li>Took initiative by engineering .dll files using C++ in Visual Studio to explore options in making AXIS processes/batches more efficient</li>
@@ -91,7 +91,7 @@ export default function About() {
                   </div>
                   <span className="text-[#858585]">2022 - 2024</span>
                 </div>
-                <p className="text-[#cccccc] mb-4">Apart of the capital management team, problem solving for capital adequacy and solvency requirements.</p>
+                <p className="text-[#cccccc] mb-4">Apart of the actuarial team.</p>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
                   <li>Developed SQL stored procedures to solve complex problems</li>
                   <li>Created robust automation solutions using VBA, enabling the seamless execution of various tasks independently and achieving remarkable efficiency gains with manual process times reduced by up to 90%</li>
