@@ -21,9 +21,7 @@ export default function About() {
                   <span className="text-[#858585]">Jul 2025 – Present</span>
                 </div>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
-                  <li>Sole technical hire owning end-to-end data + ML stack: built production pipelines from internal and vendor sources, delivering retention/frequency/severity/pure-premium models and analytics for 30+ member companies and acting as the technical point of contact with external partners</li>
-                  <li>Established the Azure DevOps SDLC from zero (repos, branching/PR governance, standards), and shipped reusable, modular Python data/analytics frameworks including competitor rate reverse-engineering (premium reconstruction) with scenario and stress testing.</li>
-                  <li>Delivered a Microsoft Fabric production platform for 100+ users (KQL + SQL stored procedures, orchestrated refresh/subscriptions), presenting to member-company CEOs and running enablement/training across vendors, Risk, IT, and Data teams.</li>
+                  <li>Data & Machine Learning</li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
                   {["Python", "SQL", "KQL", "Fabric", "PowerBI", "Azure DevOps"].map((tech, techIndex) => (
