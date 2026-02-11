@@ -23,12 +23,6 @@ export default function Projects() {
       link: 'https://github.com/raadthedeveloper/ModelingPlatform-CompatibleRateDLL'
     },
     {
-      title: 'HouseDrift',
-      description: ["A private web-based platform designed for intelligent management and tracking of residential property transactions. Engineered a comprehensive data pipeline that captures real estate data from API HTTP requests through Fiddler, processes JSON responses, and feeds structured data into a deep neural network to predict house prices. The platform leverages machine learning algorithms to forecast home valuations and project future homeowner cash flows, enabling data-driven decision-making in real estate. Currently under private development in a secured repository."],
-      technologies: ['Next.js', 'Node.js', 'PostgreSQL', "Mongodb", "React", "Python", "Scikit-learn"],
-      link: 'https://github.com/raadthedeveloper'
-    },
-    {
       title: 'Planner',
       description: 'An AI-powered event planning platform engineered to autonomously manage and optimize end-to-end event logistics. Integrates intelligent scheduling, resource allocation, and personalized recommendations to streamline the planning process. Currently in private development with a secured codebase.',
       technologies: ['React', 'Next.js', 'Node.js', 'Stripe','React'],

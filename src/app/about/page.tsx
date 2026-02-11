@@ -12,23 +12,22 @@ export default function About() {
             <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Experience</h2>
             <div className="space-y-8">
 
-            <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
+              <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-[#E06C75]">Data Scientist</h3>
-                    <p className="text-[#61AFEF]">OMAP, Farm Mutual Re</p>
+                    <h3 className="text-xl font-bold text-[#E06C75]">Data Scientist, Machine Learning</h3>
+                    <p className="text-[#61AFEF]">Farm Mutual Re · Cambridge, ON</p>
                   </div>
-                  <span className="text-[#858585]">2025 - Present</span>
+                  <span className="text-[#858585]">Jul 2025 – Present</span>
                 </div>
-                <p className="text-[#cccccc] mb-4">Apart of the data science & engineering team.</p>
+                <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
+                  <li>Sole technical hire owning end-to-end data + ML stack: built production pipelines from internal and vendor sources, delivering retention/frequency/severity/pure-premium models and analytics for 30+ member companies and acting as the technical point of contact with external partners</li>
+                  <li>Established the Azure DevOps SDLC from zero (repos, branching/PR governance, standards), and shipped reusable, modular Python data/analytics frameworks including competitor rate reverse-engineering (premium reconstruction) with scenario and stress testing.</li>
+                  <li>Delivered a Microsoft Fabric production platform for 100+ users (KQL + SQL stored procedures, orchestrated refresh/subscriptions), presenting to member-company CEOs and running enablement/training across vendors, Risk, IT, and Data teams.</li>
+                </ul>
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "SQL", "Fabric", "PowerBI"].map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
-                    >
-                      {tech}
-                    </span>
+                  {["Python", "SQL", "KQL", "Fabric", "PowerBI", "Azure DevOps"].map((tech, techIndex) => (
+                    <span key={techIndex} className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]">{tech}</span>
                   ))}
                 </div>
               </div>
@@ -36,49 +35,58 @@ export default function About() {
               <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-[#E06C75]">Associate Actuary</h3>
-                    <p className="text-[#61AFEF]">PartnerRe</p>
+                    <h3 className="text-xl font-bold text-[#E06C75]">Machine Learning Engineer</h3>
+                    <p className="text-[#61AFEF]">Rexelle · Toronto, ON</p>
                   </div>
-                  <span className="text-[#858585]">2024 - 2025</span>
+                  <span className="text-[#858585]">Apr 2025 – Present</span>
                 </div>
-                <p className="text-[#cccccc] mb-4">Apart of actuarial team.</p>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
-                  <li>Modelled new treaty cells in AXIS from pricing to production by creating AXIS scripts in DataLink, batches, and rules tables</li>
-                  <li>Took initiative by engineering .dll files using C++ in Visual Studio to explore options in making AXIS processes/batches more efficient</li>
+                  <li>Reverse engineered HTTPS request/response payloads using Fiddler to extract real estate data, then implemented cleaning/normalization and persisted curated datasets in MongoDB for ML training/inference</li>
+                  <li>Implemented a full ML pipeline: flattened nested JSON to normalized schemas with validation/error handling, designed MongoDB indexes for feature retrieval performance, trained Python house price models, and integrated regulator feeds/APIs into ingestion services</li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
-                  {["C++", "Moody's AXIS", "SQL"].map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
-                    >
-                      {tech}
-                    </span>
+                  {["Python", "MongoDB", "Fiddler", "scikit-learn"].map((tech, techIndex) => (
+                    <span key={techIndex} className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]">{tech}</span>
                   ))}
                 </div>
               </div>
-              
+
+              <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#E06C75]">Associate Actuary, Developer</h3>
+                    <p className="text-[#61AFEF]">PartnerRe · Toronto, ON</p>
+                  </div>
+                  <span className="text-[#858585]">Aug 2024 – Jun 2025</span>
+                </div>
+                <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
+                  <li>Re-engineered Moody&apos;s AXIS VB.NET scripting framework with consistent patterns, shared utilities, and cleaner control flow to improve interpretability, testing, and execution efficiency</li>
+                  <li>Streamlined AXIS workflow by developing and integrating native C++ DLL in Visual Studio, achieving 96% reduction in runtime, leading to being tasked with engineering DLL solutions to accelerate data and policy information table (PIT) pipelines within AXIS</li>
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {["C++", "VB.NET", "Moody's AXIS", "Visual Studio"].map((tech, techIndex) => (
+                    <span key={techIndex} className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]">{tech}</span>
+                  ))}
+                </div>
+              </div>
+
               <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-[#E06C75]">Software Engineer</h3>
-                    <p className="text-[#61AFEF]">Synaply</p>
+                    <p className="text-[#61AFEF]">Synaply · Toronto, ON</p>
                   </div>
-                  <span className="text-[#858585]">2024 - 2024</span>
+                  <span className="text-[#858585]">Apr 2024 – Apr 2025</span>
                 </div>
-                <p className="text-[#cccccc] mb-4">Apart of the engineering team.</p>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
-                  <li>Contributed as a software engineer to the development of a sales intelligence web application that leverages AI to transform qualitative insights from sales representatives into actionable data.</li>
+                  <li>Shipped full-stack features in TypeScript (React + Express/Node), owning end-to-end delivery from requirements and API/data-contract design through testing, code reviews, and production validation</li>
+                  <li>Designed and performance-tuned PostgreSQL for high-ingestion, low-latency workloads, optimizing indexes and query plans (EXPLAIN/ANALYZE) to improve hot-path filter/search performance</li>
+                  <li>Built a Python RAG-based LLM pipeline for summarization and theme extraction, iterating on retrieval + model behavior with the R&D team and supporting production reliability via vulnerability remediation and runtime security controls</li>
                   <li><a href="https://www.synaply.io" target="_blank" rel="noopener noreferrer" className="text-[#61AFEF] hover:text-white transition-colors">www.synaply.io</a></li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
-                  {["React", "Next.js", "Express"].map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
-                    >
-                      {tech}
-                    </span>
+                  {["TypeScript", "React", "Express", "PostgreSQL", "Python"].map((tech, techIndex) => (
+                    <span key={techIndex} className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]">{tech}</span>
                   ))}
                 </div>
               </div>
@@ -86,26 +94,35 @@ export default function About() {
               <div className="bg-[#252526] p-6 rounded-lg shadow-sm border border-[#3e3e42]">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-[#E06C75]">Actuarial Analyst</h3>
-                    <p className="text-[#61AFEF]">Foresters</p>
+                    <h3 className="text-xl font-bold text-[#E06C75]">Actuarial Analyst, Business Planning and Capital Management</h3>
+                    <p className="text-[#61AFEF]">Foresters Financial · Toronto, ON</p>
                   </div>
-                  <span className="text-[#858585]">2022 - 2024</span>
+                  <span className="text-[#858585]">Sep 2022 – Apr 2024</span>
                 </div>
-                <p className="text-[#cccccc] mb-4">Apart of the actuarial team.</p>
                 <ul className="list-disc list-inside text-[#cccccc] space-y-2 mb-4">
-                  <li>Developed SQL stored procedures to solve complex problems</li>
-                  <li>Created robust automation solutions using VBA, enabling the seamless execution of various tasks independently and achieving remarkable efficiency gains with manual process times reduced by up to 90%</li>
+                  <li>Built a Python-based automated IFRS 17 LRC calculator, implementing balance-sheet bucketing and classification logic to produce standardized outputs with faster run-time</li>
+                  <li>Engineered SQL stored procedures to (1) auto-prune unused segmentation and line items to streamline roll-ups and (2) persist new raw outputs as terminal-node records as data sources evolved</li>
+                  <li>Led the IFRS 4 to IFRS 17 migration of a VBA analytics library by refactoring node routing and dependency chains, and delivered VBA automation tooling that cut manual processing time by up to 90%.</li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
-                  {["SQL", "VBA", "Moody's AXIS"].map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]"
-                    >
-                      {tech}
-                    </span>
+                  {["Python", "SQL", "VBA"].map((tech, techIndex) => (
+                    <span key={techIndex} className="bg-[#2d2d2d] text-[#61AFEF] px-3 py-1 rounded-full text-sm border border-[#3e3e42]">{tech}</span>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-[#C678DD]">Technologies</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
+                <h3 className="text-lg font-semibold mb-3 text-[#E06C75]">Programming Languages</h3>
+                <p className="text-[#cccccc]">Python (pandas, scikit-learn), R (tidyverse, caret), C++, DataLink/VB.NET, VBA, TypeScript, Java, SQL, KQL</p>
+              </div>
+              <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
+                <h3 className="text-lg font-semibold mb-3 text-[#E06C75]">DBs & Tools</h3>
+                <p className="text-[#cccccc]">SSMS, PostgreSQL, MongoDB, AXIS, Docker, Git, MS Office, OracleDB, PowerBI/Fabric</p>
               </div>
             </div>
           </div>
@@ -116,7 +133,7 @@ export default function About() {
                 <h2 className="text-2xl font-semibold mb-6 text-[#C678DD]">Education</h2>
                 <div className="bg-[#252526] p-6 rounded-lg border border-[#3e3e42]">
                   <h3 className="text-xl font-semibold mb-2 text-[#E06C75]">Honours Bachelor of Science in Pure Mathematics</h3>
-                  <p className="text-[#858585]">2022</p>
+                  <p className="text-[#858585]">Conferred 2022</p>
                   <p className="text-[#cccccc]">University of Toronto</p>
                 </div>
               </div>
